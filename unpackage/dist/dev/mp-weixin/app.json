@@ -1,0 +1,81 @@
+{
+  "pages": [
+    "pages/Login/login",
+    "pages/index/index",
+    "pages/task/Task",
+    "pages/my/My",
+    "pages/Login/register",
+    "pages/Login/phonelogin",
+    "pages/Tixian/tixianindex",
+    "pages/Tixian/wxtixian",
+    "pages/Tixian/aliplaytixian",
+    "pages/my/personaldata",
+    "pages/my/myaccount",
+    "pages/my/myincome",
+    "pages/my/mytixian",
+    "pages/my/mycollect",
+    "pages/my/messages",
+    "pages/my/messages-content",
+    "pages/my/help",
+    "pages/my/help-text",
+    "pages/my/help-video",
+    "pages/my/help-video-content",
+    "pages/my/zhanghuanquan",
+    "pages/my/xiugaipassword",
+    "pages/my/xiugaiphone",
+    "pages/my/xiugaiphonetwo",
+    "pages/my/resetpassword",
+    "pages/index/lingqujiangli",
+    "pages/index/bawangcan",
+    "pages/my/yilingqu",
+    "pages/my/daishenhe",
+    "pages/my/yiwancheng",
+    "pages/my/yishibai",
+    "pages/task/mytask",
+    "pages/task/Taskdetails",
+    "pages/task/YilinquTask",
+    "pages/task/shenheTask",
+    "pages/my/Domain",
+    "pages/my/AddDomain",
+    "pages/my/Domaindetails",
+    "pages/my/tianxiepassword",
+    "pages/my/tianxiepassword1",
+    "pages/my/Tiephone",
+    "pages/my/helptext-content"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Hello uniapp",
+    "navigationBarBackgroundColor": "#f4c336",
+    "backgroundColor": "#f4c336"
+  },
+  "usingComponents": {},
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/Home.png",
+        "selectedIconPath": "static/Homes.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/task/Task",
+        "iconPath": "static/tesk.png",
+        "selectedIconPath": "static/tesks.png",
+        "text": "任务"
+      },
+      {
+        "pagePath": "pages/my/My",
+        "iconPath": "static/my.png",
+        "selectedIconPath": "static/mys.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

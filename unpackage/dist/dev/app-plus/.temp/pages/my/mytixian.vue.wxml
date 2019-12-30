@@ -1,0 +1,30 @@
+<template name="55605d60">
+  <view class="_view data-v-3491c5fe content">
+    <view class="_view data-v-3491c5fe uni-tx-title">
+      <text class="_text data-v-3491c5fe">金额</text>
+      <text class="_text data-v-3491c5fe">时间</text>
+      <text class="_text data-v-3491c5fe">路径</text>
+      <text class="_text data-v-3491c5fe">状态</text>
+    </view>
+    <view class="_view data-v-3491c5fe uni-tx-content">
+      <view class="_view data-v-3491c5fe uni-tx-item">
+        <text class="_text data-v-3491c5fe uni-tx-sum">2000元</text>
+        <text class="_text data-v-3491c5fe uni-tx-time">2018-09-11-14:23</text>
+        <text class="_text data-v-3491c5fe uni-tx-lj">微信</text>
+        <text class="_text data-v-3491c5fe uni-tx-zt">审核中</text>
+      </view>
+      <view class="_view data-v-3491c5fe uni-tx-item">
+        <text class="_text data-v-3491c5fe uni-tx-sum">20元</text>
+        <text class="_text data-v-3491c5fe uni-tx-time">2018-09-11-14:23</text>
+        <text class="_text data-v-3491c5fe uni-tx-lj">支付宝</text>
+        <text class="_text data-v-3491c5fe uni-tx-zt">审核中</text>
+      </view>
+      <view class="_view data-v-3491c5fe uni-tx-item">
+        <text class="_text data-v-3491c5fe uni-tx-sum">10元</text>
+        <text class="_text data-v-3491c5fe uni-tx-time">2018-09-11-14:23</text>
+        <text class="_text data-v-3491c5fe uni-tx-lj">微信</text>
+        <text class="_text data-v-3491c5fe uni-tx-zt">审核中</text>
+      </view>
+    </view>
+  </view>
+</template>

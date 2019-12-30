@@ -1,0 +1,2 @@
+<import src="./yishibai.vue.wxml" />
+    <template is="473e5e38" data="{{ ...$root['0'], $root }}"/>

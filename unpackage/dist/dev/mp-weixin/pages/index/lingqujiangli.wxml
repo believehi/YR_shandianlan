@@ -1,0 +1,2 @@
+<import src="./lingqujiangli.vue.wxml" />
+    <template is="043a9cc8" data="{{ ...$root['0'], $root }}"/>

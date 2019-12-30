@@ -1,0 +1,2 @@
+<import src="./mytixian.vue.wxml" />
+    <template is="4e00467d" data="{{ ...$root['0'], $root }}"/>

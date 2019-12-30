@@ -1,0 +1,40 @@
+@import "../../common/vendor.wxss";
+
+.content {
+  padding-top: 15rpx;
+  height: 1190rpx;
+}
+.uni-product {
+  background: #FFFFFF;
+  border-radius: 20rpx;
+  height: 90rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 650rpx;
+  margin: 0 auto 15rpx auto;
+  line-height: 90rpx;
+  padding: 0 20rpx 0 30rpx;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.uni-product .uni-title {
+  font-size: 32rpx;
+  color: #1a1a1a;
+}
+.uni-product .uni-time {
+  font-size: 30rpx;
+  color: #c6c6c6;
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  flex-grow: 2;
+  text-align: right;
+  margin-right: 10rpx;
+}
+.iconfont-2 {
+  margin-top: 6rpx;
+}

@@ -1,0 +1,41 @@
+<template name="5c10b6a6">
+  <view class="_view data-v-624e644e content">
+    <view class="_view data-v-624e644e uni-product-list">
+      <view class="_view data-v-624e644e uni-product" bindtap="handleProxy" data-eventid="{{'nh2-0'}}" data-comkey="{{$k}}">
+        <text class="_text data-v-624e644e uni-title">做任务须知</text>
+        <text class="_text data-v-624e644e uni-time">3天前</text>
+        <uni-icon class="_uni-icon data-v-624e644e iconfont-2 icon-you"></uni-icon>
+      </view>
+      <view class="_view data-v-624e644e uni-product">
+        <text class="_text data-v-624e644e uni-title">做任务须知</text>
+        <text class="_text data-v-624e644e uni-time">3天前</text>
+        <uni-icon class="_uni-icon data-v-624e644e iconfont-2 icon-you"></uni-icon>
+      </view>
+      <view class="_view data-v-624e644e uni-product">
+        <text class="_text data-v-624e644e uni-title">做任务须知</text>
+        <text class="_text data-v-624e644e uni-time">3天前</text>
+        <uni-icon class="_uni-icon data-v-624e644e iconfont-2 icon-you"></uni-icon>
+      </view>
+      <view class="_view data-v-624e644e uni-product">
+        <text class="_text data-v-624e644e uni-title">做任务须知</text>
+        <text class="_text data-v-624e644e uni-time">3天前</text>
+        <uni-icon class="_uni-icon data-v-624e644e iconfont-2 icon-you"></uni-icon>
+      </view>
+      <view class="_view data-v-624e644e uni-product">
+        <text class="_text data-v-624e644e uni-title">做任务须知</text>
+        <text class="_text data-v-624e644e uni-time">3天前</text>
+        <uni-icon class="_uni-icon data-v-624e644e iconfont-2 icon-you"></uni-icon>
+      </view>
+      <view class="_view data-v-624e644e uni-product">
+        <text class="_text data-v-624e644e uni-title">做任务须知</text>
+        <text class="_text data-v-624e644e uni-time">3天前</text>
+        <uni-icon class="_uni-icon data-v-624e644e iconfont-2 icon-you"></uni-icon>
+      </view>
+      <view class="_view data-v-624e644e uni-product">
+        <text class="_text data-v-624e644e uni-title">做任务须知</text>
+        <text class="_text data-v-624e644e uni-time">3天前</text>
+        <uni-icon class="_uni-icon data-v-624e644e iconfont-2 icon-you"></uni-icon>
+      </view>
+    </view>
+  </view>
+</template>

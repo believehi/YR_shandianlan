@@ -1,0 +1,34 @@
+<template name="3042f9cd">
+  <view class="_view data-v-281ae8d2">
+    <form bindsubmit="handleProxy" bindreset="handleProxy" class="_form data-v-281ae8d2 uni-login-content" data-eventid="{{'loa-0'}}" data-comkey="{{$k}}">
+      <view class="_view data-v-281ae8d2 uni-form-item col">
+        <uni-icon type class="_uni-icon data-v-281ae8d2 uni-zh-input"></uni-icon>
+        <input type="text" class="_input data-v-281ae8d2 uni-input" placeholder="请输入手机号" />
+      </view>
+      <view class="_view data-v-281ae8d2 uni-form-item col">
+        <uni-icon type class="_uni-icon data-v-281ae8d2 uni-phone-input"></uni-icon>
+        <input type="password" class="_input data-v-281ae8d2 uni-phone" placeholder="请输入验证码" />
+        <view class="_view data-v-281ae8d2 message_code_gain">{{tipsCode}}</view>
+      </view>
+      <view class="_view data-v-281ae8d2 uni-login-but">
+        <button formType="submit" class="_button data-v-281ae8d2">登录</button>
+      </view>
+    </form>
+    <view class="_view data-v-281ae8d2 uni-login-list">
+      <view class="_view data-v-281ae8d2 uni-kj">
+        <text bindtap="handleProxy" data-eventid="{{'6Bo-1'}}" data-comkey="{{$k}}" class="_text data-v-281ae8d2">手机密码登录</text>
+        <text bindtap="handleProxy" data-eventid="{{'KXc-2'}}" data-comkey="{{$k}}" class="_text data-v-281ae8d2">新用户注册</text>
+      </view>
+    </view>
+    <view class="_view data-v-281ae8d2 uni-wx-login">
+      <view class="_view data-v-281ae8d2 uni-wx-tit">
+        <view class="_view data-v-281ae8d2 uni-wx-item"></view>
+        <text class="_text data-v-281ae8d2">快捷登陆</text>
+        <view class="_view data-v-281ae8d2 uni-wx-item"></view>
+      </view>
+    </view>
+    <view class="_view data-v-281ae8d2 uni-wx-but">
+      <uni-icon class="_uni-icon data-v-281ae8d2 uni-wx-icon"></uni-icon>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,114 @@
+@import "../../common/vendor.wxss";
+
+.content {
+  background: #f5f5f5;
+}
+.uni-swiper-box {
+  border-top: 2rpx solid #F5F5F5;
+}
+.segmented-control {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 26rpx;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 135rpx;
+}
+.segmented-control.button {
+  border: 2rpx soli;
+}
+.segmented-control.text {
+  border: 0;
+  border-radius: 0rpx;
+}
+.segmented-control-item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  text-align: center;
+  line-height: 190rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.segmented-control-item.text {
+  border-left: 0;
+}
+.segmented-control-item:first-child {
+  border-left-width: 0;
+}
+.uni-rw-cont:first-child {
+  margin-top: 15rpx;
+}
+.segmented-control-item:nth-child(1) {
+  background: url(http://lx97.cn/static/linquicon.png) no-repeat center;
+  background-size: 45rpx 45rpx;
+  background-position-y: 25rpx;
+}
+.segmented-control-item:nth-child(2) {
+  background: url(http://lx97.cn/static/shenheicon.png) no-repeat center;
+  background-size: 45rpx 45rpx;
+  background-position-y: 25rpx;
+}
+.segmented-control-item:nth-child(3) {
+  background: url(http://lx97.cn/static/wcicon.png) no-repeat center;
+  background-size: 45rpx 45rpx;
+  background-position-y: 25rpx;
+}
+.segmented-control-item:nth-child(4) {
+  background: url(http://lx97.cn/static/sbicon.png) no-repeat center;
+  background-size: 45rpx 45rpx;
+  background-position-y: 25rpx;
+}
+.uni-rw-cont {
+  position: relative;
+}
+.uni-rw-cont:first-child {
+  margin-top: 15rpx;
+}
+.uni-rw-text .Text_Nowrap {
+  padding-bottom: 5rpx;
+}
+.uni-rw-time {
+  text-align: center;
+  padding-left: 20rpx;
+}
+.uni-rw-time2 {
+  padding-left: 0rpx !important;
+}
+.uni-rw-time3 {
+  color: #b6b6b6;
+}
+.uni-rw-time view {
+  font-size: 26rpx;
+}
+.uni-rw-time text {
+  font-size: 26rpx;
+  color: #ff533c;
+}
+.uni-rw-text .Text_Nowrap {
+  width: 380rpx;
+  display: inline-block;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+.uni-rw-text:after {
+  content: "";
+  width: 1rpx;
+  height: 70rpx;
+  position: absolute;
+  top: 44rpx;
+  right: 168rpx;
+  background: #e6e6e6;
+}

@@ -1,0 +1,2 @@
+<import src="./tixianindex.vue.wxml" />
+    <template is="dba7c8ce" data="{{ ...$root['0'], $root }}"/>

@@ -1,0 +1,38 @@
+<import src="/components/mpvue-picker/mpvuePicker.vue.wxml" />
+<template name="67944435">
+  <view class="_view data-v-0036307a uni-reg-content">
+    <form class="_form data-v-0036307a uni-reg-list" bindsubmit="handleProxy" data-eventid="{{'oyc-8'}}" data-comkey="{{$k}}">
+      <view class="_view data-v-0036307a uni-form-item">
+        <input type="number" name="mobile" value="{{mobile}}" bindinput="handleProxy" placeholder="请输入手机号" data-eventid="{{'GwY-0'}}" data-comkey="{{$k}}" class="_input data-v-0036307a" />
+      </view>
+      <view class="_view data-v-0036307a uni-form-item">
+        <input type="number" name="yzm" placeholder="请输入验证码" class="_input data-v-0036307a" />
+        <view class="_view data-v-0036307a message_code_gain">{{tipsCode}}</view>
+      </view>
+      <view class="_view data-v-0036307a uni-form-item">
+        <input password name="password" value="{{password}}" bindinput="handleProxy" type="text" placeholder="请输入密码" data-eventid="{{'sgc-1'}}" data-comkey="{{$k}}" class="_input data-v-0036307a" />
+      </view>
+      <view class="_view data-v-0036307a uni-form-item">
+        <input password name="conpassword" value="{{conpassword}}" bindinput="handleProxy" type="text" placeholder="确认密码" data-eventid="{{'a2k-2'}}" data-comkey="{{$k}}" class="_input data-v-0036307a" />
+      </view>
+      <view class="_view data-v-0036307a">
+        <view class="_view data-v-0036307a uni-pt">请选择相应平台</view>
+        <view class="_view data-v-0036307a uni-menu-box">
+          <view class="_view data-v-0036307a uni-menu-mt col">
+            <text class="_text data-v-0036307a">平台选择</text>
+            <input type="text" value="{{pickerText}}" bindtap="handleProxy" disabled="ture" class="_input data-v-0036307a uni-menu-but" placeholder="未选择" id="{{pickerValue}}" placeholder-style="color:#000" data-eventid="{{'Qma-3'}}" data-comkey="{{$k}}"
+            />
+            <template ref="mpvuePicker" bindonConfirm="handleProxy" bindonCancel="handleProxy" data-eventid="{{'byk-4'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'tTg-0'],$root}}" is="5180a1bc"></template>
+            <input type="text" name="account" value="{{account}}" bindinput="handleProxy" placeholder="请输入" data-eventid="{{'jee-5'}}" data-comkey="{{$k}}" class="_input data-v-0036307a" />
+          </view>
+        </view>
+      </view>
+      <view class="_view data-v-0036307a uni-zc-but">
+        <button type="primary" form-type="submit" bindtap="handleProxy" data-eventid="{{'NEc-6'}}" data-comkey="{{$k}}" class="_button data-v-0036307a">注册</button>
+        <view class="_view data-v-0036307a uni-login-but" bindtap="handleProxy" data-eventid="{{'69Z-7'}}" data-comkey="{{$k}}">
+          <text class="_text data-v-0036307a">已有账号？立即登录</text>
+        </view>
+      </view>
+    </form>
+  </view>
+</template>

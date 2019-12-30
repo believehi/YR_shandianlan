@@ -1,0 +1,74 @@
+
+.active {
+	color: #ffca2f !important;
+}
+
+/* 内容背景色 */
+.content {
+	background: #f5f5f5;
+}
+
+/* 选项卡样式 */
+.uni-rw-nav {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	width: 100%;
+	font-size: 30rpx;
+	border-radius: 10rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	margin: 0 auto;
+	overflow: hidden;
+	letter-spacing: 2rpx;
+	padding: 25rpx 0;
+	background: #FFFFFF;
+}
+.uni-ti-shi{font-size: 30rpx;color: #C0C0C0;text-align: center;width: 100%;display: inline-block;padding: 10rpx 0;}
+.uni-rw-nav view {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	text-align: center;
+	line-height: 60rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	position: relative;
+}
+.uni-rw-nav view text {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+.uni-rw-nav view:after {
+	content: "";
+	width: 2rpx;
+	height: 22rpx;
+	position: absolute;
+	top: 20rpx;
+	right: 1rpx;
+	background: #b6b6b6;
+}
+.uni-rw-nav view:last-child:after {
+	content: "";
+	width: 0rpx;
+}
+
+/* 分类列表样式 */
+
+/* 任务列表 */
+.uni-rw-cont:first-child {
+	margin-top: 15rpx;
+}
+

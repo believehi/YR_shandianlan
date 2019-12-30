@@ -1,0 +1,2 @@
+<import src="./Tiephone.vue.wxml" />
+    <template is="7d3c1408" data="{{ ...$root['0'], $root }}"/>

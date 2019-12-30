@@ -1,0 +1,2 @@
+<import src="./aliplaytixian.vue.wxml" />
+    <template is="fe084342" data="{{ ...$root['0'], $root }}"/>

@@ -1,0 +1,9 @@
+
+.content{height: 1200rpx;}
+.uni-password-but{margin: 0rpx auto;width: 700rpx;padding: 53rpx 0;}
+.uni-password-but .uni-phone{width: 655rpx;height: 80rpx;background-color: #ffffff;border-radius: 40px;border: solid 1px #dbdbdc;padding-left: 45rpx;font-size: 32rpx;margin-bottom: 25rpx;}
+.uni-password-but ._button{margin-top: 75rpx;border-radius: 40rpx;background-color: #ffca30;font-size: 32rpx;color: #3C3C3C;letter-spacing: 2rpx;}
+.uni-yzm-but{display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;}
+.uni-yzm-but view{height: 80rpx;font-size: 30rpx;color: #3c3c3c;background-color: #ffca30;border-radius: 40rpx;line-height: 80rpx;text-align: center;margin-left: 15rpx;padding: 0 20rpx;width: 260rpx;}
+.uni-yzm-but ._input{width:420rpx;height: 80rpx;background-color: #ffffff;border-radius: 40px;border: solid 1px #dbdbdc;padding-left: 45rpx;font-size: 32rpx;margin-bottom: 25rpx;}
+

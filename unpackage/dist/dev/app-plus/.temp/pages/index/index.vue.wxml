@@ -1,0 +1,68 @@
+<template name="3777ab0e">
+  <view class="_view data-v-70ba2c54 content">
+    <view class="_view data-v-70ba2c54 uni-card-header">
+      <view class="_view data-v-70ba2c54 uni-card-content">
+        <view class="_view data-v-70ba2c54 uni-user-content">
+          <view class="_view data-v-70ba2c54 uni-user-img">
+            <image src="../../static/tuzi.jpg" class="_image data-v-70ba2c54"></image>
+            <text class="_text data-v-70ba2c54 uni-user-name">{{baseinfoArray.nikename}}</text>
+          </view>
+          <view class="_view data-v-70ba2c54 col uni-Taiyanbi">
+            <view class="_view data-v-70ba2c54 Qian_icon"></view>
+            <text class="_text data-v-70ba2c54">{{baseinfoArray.suncoin}}</text>
+          </view>
+          <view class="_view data-v-70ba2c54 uni-shouyi col">
+            <text class="_text data-v-70ba2c54">今日收益：{{baseinfoArray.todayIncome}}
+              <text class="_text data-v-70ba2c54 uni-fgx"></text>
+            </text>
+            <text class="_text data-v-70ba2c54">累计收益：{{baseinfoArray.cumulative}}</text>
+          </view>
+          <view class="_view data-v-70ba2c54 uni-Tx-But">
+            <button type="primary" bindtap="handleProxy" data-eventid="{{'Ft7-0'}}" data-comkey="{{$k}}" class="_button data-v-70ba2c54">提现</button>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_view data-v-70ba2c54 uni-hd-content">
+      <view class="_view data-v-70ba2c54 uni-hd-img col">
+        <image src="../../static/index1.jpg" mode class="_image data-v-70ba2c54"></image>
+        <image src="../../static/index2.jpg" mode class="_image data-v-70ba2c54"></image>
+      </view>
+      <view class="_view data-v-70ba2c54 uni-but-list">
+        <view class="_view data-v-70ba2c54 uni-rw uni-but" bindtap="handleProxy" data-eventid="{{'5Of-1'}}" data-comkey="{{$k}}">
+          <uni-icon class="_uni-icon data-v-70ba2c54 uni-rw-but"></uni-icon>
+          <view class="_view data-v-70ba2c54">
+            <text class="_text data-v-70ba2c54">我的任务</text>
+          </view>
+        </view>
+        <view class="_view data-v-70ba2c54 uni-bw uni-but" bindtap="handleProxy" data-eventid="{{'0im-2'}}" data-comkey="{{$k}}">
+          <uni-icon class="_uni-icon data-v-70ba2c54 uni-bw-but"></uni-icon>
+          <view class="_view data-v-70ba2c54">
+            <text class="_text data-v-70ba2c54">霸王餐</text>
+          </view>
+        </view>
+        <view class="_view data-v-70ba2c54 uni-lq uni-but" bindtap="handleProxy" data-eventid="{{'fWD-3'}}" data-comkey="{{$k}}">
+          <uni-icon class="_uni-icon data-v-70ba2c54 uni-lq-but"></uni-icon>
+          <view class="_view data-v-70ba2c54">
+            <text class="_text data-v-70ba2c54">领取奖励</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_view data-v-70ba2c54 uni-rw-list" wx:key="index" key="{{index}}" wx:for="{{renwuArray}}" wx:for-index="index" wx:for-item="item">
+      <view class="_view data-v-70ba2c54 uni-rw-cont" bindtap="handleProxy" data-rwid="{{item.ID}}" data-eventid="{{'dsr-4-'+index}}" data-comkey="{{$k}}">
+        <image src="{{item.thumbnail}}" class="_image data-v-70ba2c54"></image>
+        <view class="_view data-v-70ba2c54 uni-rw-text">
+          <text class="_text data-v-70ba2c54 Text_Nowrap">{{item.TaskName}}</text>
+          <view class="_view data-v-70ba2c54 uni-rw-sl">
+            <view class="_view data-v-70ba2c54">{{item.PeopleMin}}-{{item.PeopleMax}}人</view>
+            <view class="_view data-v-70ba2c54">{{item.Days}}内</view>
+            <view class="_view data-v-70ba2c54">还剩
+              <text class="_text data-v-70ba2c54">{{item.Surplus}}</text>份</view>
+          </view>
+        </view>
+        <button type="primary" class="_button data-v-70ba2c54">领取</button>
+      </view>
+    </view>
+  </view>
+</template>

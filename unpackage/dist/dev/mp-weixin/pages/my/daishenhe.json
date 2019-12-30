@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "待审核",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "enablePullDownRefresh": true
+}

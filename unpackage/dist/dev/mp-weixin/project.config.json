@@ -1,0 +1,45 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.7.0",
+	"appid": "wxf3faac5f46f05b2e",
+	"projectname": "%E9%97%AA%E7%94%B5%E6%87%92",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"name": "任务",
+					"query": "interval=4000&autoplay=false",
+					"id": 0,
+					"pathName": "pages/Login/login"
+				},
+				{
+					"name": "test",
+					"id": 1,
+					"pathName": "pages/component/switch/switch"
+				}
+			]
+		}
+	}
+}

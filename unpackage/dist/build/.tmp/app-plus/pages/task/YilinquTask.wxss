@@ -1,0 +1,135 @@
+
+view {
+	line-height: 35rpx;
+}
+.uni-img{width: 100rpx;height: 100rpx;}
+.uni-ew-but {
+	width: 239rpx;
+	height: 56rpx;
+	background-color: #f4c336;
+	border-radius: 10px;
+	font-size: 28rpx;
+	line-height: 55rpx;
+	color: #FFFFFF;
+	float: left;
+}
+.content {
+	padding-top: 15rpx;
+	padding-bottom: 107rpx;
+}
+.uni-rw-time {
+	background-color: #FFFFFF;
+	padding: 0 25rpx;
+	width: 700rpx;
+	margin-top: 15rpx;
+}
+.uni-time-item .uni-time1 {
+	font-size: 26rpx;
+	color: #ffca2f;
+}
+.uni-rw-time .uni-rw-title {
+	text-align: center;
+	font-size: 32rpx;
+	color: #0b0b0b;
+	line-height: 80rpx;
+	border-bottom: 1rpx solid #e6e6e6;
+}
+.uni-rw-ms {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: 30rpx;
+	padding: 25rpx 0;
+}
+.uni-cz-item {
+	width: 100%;
+}
+.uni-rw-ms .uni-rw-sm {
+	width: 154rpx;
+	color: #212121;
+}
+.uni-rw-ms .uni-rw-m {
+	-webkit-box-flex: 2;
+	-webkit-flex-grow: 2;
+	    -ms-flex-positive: 2;
+	        flex-grow: 2;
+	width: 565rpx;
+	text-align: justify;
+	color: #616161;
+}
+.uni-rw-yq {
+	color: #f3571a;
+}
+.uni-rw-yq text:first-child {
+	margin-right: 40rpx;
+}
+.uni-sj-wz {
+	border-bottom: 1rpx solid #e6e6e6;
+}
+.uni-rw-m image {
+	width: 267rpx;
+	height: 178rpx;
+	margin-top: 10rpx;
+}
+.uni-rw-m image:first-child {
+	margin-right: 15rpx;
+}
+.uni-cz-bz text:first-child {
+	margin-top: 25rpx;
+}
+.uni-cz-bz text {
+	font-size: 30rpx;
+	color: #616161;
+	display: inline-block;
+	margin-bottom: 25rpx;
+}
+.uni-time-list {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.uni-time-item {
+	font-size: 30rpx;
+	color: #212121;
+	text-align: left;
+}
+.uni-time-item text {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 15rpx;
+}
+.uni-time-item text:first-child {
+	margin-top: 15rpx;
+}
+.active {
+	border-bottom: 2rpx solid #fbb42b;
+	color: #fbb42b;
+}
+.uni-but-item {
+	position: fixed;
+	bottom: 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+.uni-but-item view {
+	width: 375rpx;
+	text-align: center;
+	line-height: 107rpx;
+	font-size: 32rpx;
+	color: #FFFFFF;
+}
+.uni-but-item .uni-sc-but {
+	background-color: #d1d1d1;
+}
+.uni-but-item .uni-lqs-but {
+	background-color: #fbb42b;
+}
+

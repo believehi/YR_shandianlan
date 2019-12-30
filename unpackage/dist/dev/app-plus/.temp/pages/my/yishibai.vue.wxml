@@ -1,0 +1,113 @@
+<template name="52175c47">
+  <view class="_view data-v-3b23c830">
+    <view class="_view data-v-3b23c830 content">
+      <view class="_view data-v-3b23c830 uni-rw-list">
+        <view class="_view data-v-3b23c830 uni-rw-cont">
+          <image src="../../static/tuzi.jpg" mode class="_image data-v-3b23c830"></image>
+          <view class="_view data-v-3b23c830 uni-rw-text">
+            <text class="_text data-v-3b23c830 Text_Nowrap">小龙坎美团5星好评送霸王餐小龙坎美团5星好评送霸王餐小龙坎美团5星好评送霸王餐</text>
+            <view class="_view data-v-3b23c830 uni-rw-sl">
+              <view class="_view data-v-3b23c830">1-2人</view>
+              <view class="_view data-v-3b23c830">5天内</view>
+              <view class="_view data-v-3b23c830">还剩
+                <text class="_text data-v-3b23c830">3</text>份</view>
+            </view>
+          </view>
+          <view class="_view data-v-3b23c830 uni-rw-time">
+            <view class="_view data-v-3b23c830">已失败</view>
+          </view>
+        </view>
+        <view class="_view data-v-3b23c830 uni-rw-cont">
+          <image src="../../static/tuzi.jpg" mode class="_image data-v-3b23c830"></image>
+          <view class="_view data-v-3b23c830 uni-rw-text">
+            <text class="_text data-v-3b23c830 Text_Nowrap">小龙坎美团5星好评送霸王餐小龙坎美团5星好评送霸王餐小龙坎美团5星好评送霸王餐</text>
+            <view class="_view data-v-3b23c830 uni-rw-sl">
+              <view class="_view data-v-3b23c830">1-2人</view>
+              <view class="_view data-v-3b23c830">5天内</view>
+              <view class="_view data-v-3b23c830">还剩
+                <text class="_text data-v-3b23c830">3</text>份</view>
+            </view>
+          </view>
+          <view class="_view data-v-3b23c830 uni-rw-time">
+            <view class="_view data-v-3b23c830">已失败</view>
+          </view>
+        </view>
+        <view class="_view data-v-3b23c830 uni-rw-cont">
+          <image src="../../static/tuzi.jpg" mode class="_image data-v-3b23c830"></image>
+          <view class="_view data-v-3b23c830 uni-rw-text">
+            <text class="_text data-v-3b23c830 Text_Nowrap">小龙坎美团5星好评送霸王餐小龙坎美团5星好评送霸王餐小龙坎美团5星好评送霸王餐</text>
+            <view class="_view data-v-3b23c830 uni-rw-sl">
+              <view class="_view data-v-3b23c830">1-2人</view>
+              <view class="_view data-v-3b23c830">5天内</view>
+              <view class="_view data-v-3b23c830">还剩
+                <text class="_text data-v-3b23c830">3</text>份</view>
+            </view>
+          </view>
+          <view class="_view data-v-3b23c830 uni-rw-time">
+            <view class="_view data-v-3b23c830">已失败</view>
+          </view>
+        </view>
+        <view class="_view data-v-3b23c830 uni-rw-cont">
+          <image src="../../static/tuzi.jpg" mode class="_image data-v-3b23c830"></image>
+          <view class="_view data-v-3b23c830 uni-rw-text">
+            <text class="_text data-v-3b23c830 Text_Nowrap">小龙坎美团5星好评送霸王餐</text>
+            <view class="_view data-v-3b23c830 uni-rw-sl">
+              <view class="_view data-v-3b23c830">1-2人</view>
+              <view class="_view data-v-3b23c830">5天内</view>
+              <view class="_view data-v-3b23c830">还剩
+                <text class="_text data-v-3b23c830">3</text>份</view>
+            </view>
+          </view>
+          <view class="_view data-v-3b23c830 uni-rw-time">
+            <view class="_view data-v-3b23c830">已失败</view>
+          </view>
+        </view>
+        <view class="_view data-v-3b23c830 uni-rw-cont">
+          <image src="../../static/tuzi.jpg" mode class="_image data-v-3b23c830"></image>
+          <view class="_view data-v-3b23c830 uni-rw-text">
+            <text class="_text data-v-3b23c830 Text_Nowrap">小龙坎美团5星好评送霸王餐</text>
+            <view class="_view data-v-3b23c830 uni-rw-sl">
+              <view class="_view data-v-3b23c830">1-2人</view>
+              <view class="_view data-v-3b23c830">5天内</view>
+              <view class="_view data-v-3b23c830">还剩
+                <text class="_text data-v-3b23c830">3</text>份</view>
+            </view>
+          </view>
+          <view class="_view data-v-3b23c830 uni-rw-time">
+            <view class="_view data-v-3b23c830">已失败</view>
+          </view>
+        </view>
+        <view class="_view data-v-3b23c830 uni-rw-cont">
+          <image src="../../static/tuzi.jpg" mode class="_image data-v-3b23c830"></image>
+          <view class="_view data-v-3b23c830 uni-rw-text">
+            <text class="_text data-v-3b23c830 Text_Nowrap">小龙坎美团5星好评送霸王餐小龙坎美团5星好评送霸王餐</text>
+            <view class="_view data-v-3b23c830 uni-rw-sl">
+              <view class="_view data-v-3b23c830">1-2人</view>
+              <view class="_view data-v-3b23c830">5天内</view>
+              <view class="_view data-v-3b23c830">还剩
+                <text class="_text data-v-3b23c830">3</text>份</view>
+            </view>
+          </view>
+          <view class="_view data-v-3b23c830 uni-rw-time">
+            <view class="_view data-v-3b23c830">已失败</view>
+          </view>
+        </view>
+        <view class="_view data-v-3b23c830 uni-rw-cont">
+          <image src="../../static/tuzi.jpg" mode class="_image data-v-3b23c830"></image>
+          <view class="_view data-v-3b23c830 uni-rw-text">
+            <text class="_text data-v-3b23c830 Text_Nowrap">小龙坎美团5星好评送霸王餐小龙坎美团5星好评送霸王餐</text>
+            <view class="_view data-v-3b23c830 uni-rw-sl">
+              <view class="_view data-v-3b23c830">1-2人</view>
+              <view class="_view data-v-3b23c830">5天内</view>
+              <view class="_view data-v-3b23c830">还剩
+                <text class="_text data-v-3b23c830">3</text>份</view>
+            </view>
+          </view>
+          <view class="_view data-v-3b23c830 uni-rw-time">
+            <view class="_view data-v-3b23c830">已失败</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

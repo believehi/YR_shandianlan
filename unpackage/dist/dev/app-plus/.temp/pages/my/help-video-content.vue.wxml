@@ -1,0 +1,14 @@
+<template name="48cb8f88">
+  <view class="_view data-v-84babac6">
+    <view class="_view data-v-84babac6 video-content">
+      <view class="_view data-v-84babac6 video-title">
+        <text class="_text data-v-84babac6">如何发布任务？</text>
+      </view>
+      <video src="http://www.puredo.com/tpl/www/media/v6.mp4" controls class="_video data-v-84babac6"></video>
+      <view class="_view data-v-84babac6 uni-help-text-but" bindtap="handleProxy" data-eventid="{{'zzj-0'}}" data-comkey="{{$k}}">
+        <uni-icon class="_uni-icon data-v-84babac6 uni-zps-icon"></uni-icon>
+        <text class="_text data-v-84babac6">查看图片版本</text>
+      </view>
+    </view>
+  </view>
+</template>

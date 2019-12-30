@@ -1,0 +1,7 @@
+
+.video-content{width: 700rpx;margin: 0 auto;}
+.video-content video{width: 700rpx;height: 390rpx;border-radius: 20rpx;}
+.video-content .video-title{margin: 25rpx 0;font-size: 32rpx;}
+.uni-help-text-but{display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;margin-top: 10rpx;}
+.uni-help-text-but text{font-size: 30rpx;color: #29b2c6;margin-left: 15rpx;}
+

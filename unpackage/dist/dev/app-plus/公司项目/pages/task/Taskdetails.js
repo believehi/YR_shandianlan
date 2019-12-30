@@ -1,0 +1,13 @@
+
+      !(function(){
+        var uniAppViewReadyCallback = function(){
+          setCssToHead([[2,1],"wx-view { line-height: ",[0,35],"; }\n.",[1],"content { padding-top: ",[0,15],"; padding-bottom: ",[0,107],"; }\n.",[1],"uni-rw-time { background-color: #FFFFFF; padding: 0 ",[0,25],"; width: ",[0,700],"; margin-top: ",[0,15],"; }\n.",[1],"uni-rw-time .",[1],"uni-rw-title { text-align: center; font-size: ",[0,32],"; color: #0b0b0b; line-height: ",[0,80],"; border-bottom: ",[0,1]," solid #e6e6e6; }\n.",[1],"uni-rw-ms { display: -webkit-box; display: -webkit-flex; display: flex; font-size: ",[0,30],"; padding: ",[0,25]," 0; }\n.",[1],"uni-rw-ms .",[1],"uni-rw-sm { width: ",[0,154],"; color: #212121; }\n.",[1],"uni-rw-ms .",[1],"uni-rw-m { -webkit-box-flex: 2; -webkit-flex-grow: 2; flex-grow: 2; width: ",[0,565],"; text-align: justify; color: #616161; }\n.",[1],"uni-rw-yq { color: #f3571a; }\n.",[1],"uni-rw-yq wx-text:first-child { margin-right: ",[0,40],"; }\n.",[1],"uni-sj-wz { border-bottom: ",[0,1]," solid #e6e6e6; }\n.",[1],"uni-rw-m wx-image { width: ",[0,267],"; height: ",[0,178],"; margin-top: ",[0,10],"; }\n.",[1],"uni-rw-m wx-image:first-child { margin-right: ",[0,15],"; }\n.",[1],"uni-cz-bz wx-text:first-child { margin-top: ",[0,25],"; }\n.",[1],"uni-cz-bz wx-text { font-size: ",[0,30],"; color: #616161; display: inline-block; margin-bottom: ",[0,25],"; }\n.",[1],"uni-time-list { display: -webkit-box; display: -webkit-flex; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; justify-content: space-between; }\n.",[1],"uni-time-item { font-size: ",[0,30],"; color: #212121; width: ",[0,105],"; text-align: center; }\n.",[1],"uni-time-item wx-text { display: inline-block; width: 100%; margin-bottom: ",[0,15],"; }\n.",[1],"uni-time-item wx-text:first-child { margin-top: ",[0,15],"; }\n.",[1],"active { border-bottom: ",[0,2]," solid #fbb42b; color: #fbb42b; }\n.",[1],"uni-but-item { position: fixed; bottom: 0; display: -webkit-box; display: -webkit-flex; display: flex; }\n.",[1],"uni-but-item wx-view { width: ",[0,375],"; text-align: center; line-height: ",[0,107],"; font-size: ",[0,32],"; color: #FFFFFF; }\n.",[1],"uni-but-item .",[1],"uni-sc-but { background-color: #d1d1d1; }\n.",[1],"uni-but-item .",[1],"uni-lqs-but { background-color: #fbb42b; }\n",],undefined,{path:"./pages/task/Taskdetails.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/task/Taskdetails.wxml') } }));
+        }
+        if(window.__uniAppViewReady__){
+          uniAppViewReadyCallback()
+        }else{
+          document.addEventListener('uniAppViewReady',uniAppViewReadyCallback)
+        }
+      })();
+      

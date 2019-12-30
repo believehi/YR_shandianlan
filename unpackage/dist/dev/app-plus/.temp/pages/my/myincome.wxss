@@ -1,0 +1,46 @@
+@import "../../common/vendor.wxss";
+
+.content {
+  padding-top: 15rpx;
+  height: 1200rpx;
+}
+.uni-inconme-content {
+  width: 650rpx;
+  border-radius: 20rpx;
+  min-height: 975rpx;
+  background: #FFFFFF;
+  margin: 0 auto;
+  padding: 0 25rpx;
+}
+.uni-inconme {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  border-bottom: 1rpx solid #676767;
+  font-size: 30rpx;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding: 25rpx 0;
+  color: #676767;
+}
+.uni-inconme:last-child {
+  border-bottom: none;
+}
+.uni-inconme-tit {
+  width: 371rpx;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  display: inline-block;
+  line-height: 34rpx;
+}
+.uni-time {
+  font-size: 26rpx;
+}
+.uni-tyb text {
+  color: #fe4c4c;
+  margin-right: 10rpx;
+}

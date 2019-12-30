@@ -1,0 +1,75 @@
+<template name="588d1026">
+  <view class="_view data-v-c5067764 content">
+    <view class="_view data-v-c5067764 uni-user-content uni-user-item col" bindtap="handleProxy" data-eventid="{{'O8f-0'}}" data-comkey="{{$k}}">
+      <image src="../../static/tuzi.jpg" mode class="_image data-v-c5067764 uni-user-img"></image>
+      <view class="_view data-v-c5067764 uni-user-name">
+        <text class="_text data-v-c5067764 user-name">小黄人988</text>
+        <view class="_view data-v-c5067764 user-name-fs">
+          <text class="_text data-v-c5067764">美团达人</text>
+          <text class="_text data-v-c5067764">粉丝10万+</text>
+        </view>
+      </view>
+      <uni-icon class="_uni-icon data-v-c5067764 iconfont icon-you"></uni-icon>
+    </view>
+    <view class="_view data-v-c5067764 uni-user-item uni-rw-content">
+      <view class="_view data-v-c5067764 uni-icon-item" bindtap="handleProxy" data-eventid="{{'32B-1'}}" data-comkey="{{$k}}">
+        <uni-icon class="_uni-icon data-v-c5067764 uni-lqu-icon"></uni-icon>
+        <view class="_view data-v-c5067764">
+          <text class="_text data-v-c5067764">已领取</text>
+        </view>
+      </view>
+      <view class="_view data-v-c5067764 uni-icon-item" bindtap="handleProxy" data-eventid="{{'BIi-2'}}" data-comkey="{{$k}}">
+        <uni-icon class="_uni-icon data-v-c5067764 uni-sh-icon"></uni-icon>
+        <view class="_view data-v-c5067764">
+          <text class="_text data-v-c5067764">待审核</text>
+        </view>
+      </view>
+      <view class="_view data-v-c5067764 uni-icon-item" bindtap="handleProxy" data-eventid="{{'tc3-3'}}" data-comkey="{{$k}}">
+        <uni-icon class="_uni-icon data-v-c5067764 uni-ywc-icon"></uni-icon>
+        <view class="_view data-v-c5067764">
+          <text class="_text data-v-c5067764">已完成</text>
+        </view>
+      </view>
+      <view class="_view data-v-c5067764 uni-icon-item" bindtap="handleProxy" data-eventid="{{'pOI-4'}}" data-comkey="{{$k}}">
+        <uni-icon class="_uni-icon data-v-c5067764 uni-ysb-icon"></uni-icon>
+        <view class="_view data-v-c5067764">
+          <text class="_text data-v-c5067764">已失败</text>
+        </view>
+      </view>
+    </view>
+    <view class="_view data-v-c5067764 uni-user-item uni-xx-content">
+      <view class="_view data-v-c5067764 uni-xx-item" bindtap="handleProxy" data-eventid="{{'8zE-5'}}" data-comkey="{{$k}}">
+        <uni-icon class="_uni-icon data-v-c5067764 iconfonts icon-tubiaozhizuo-"></uni-icon>
+        <text class="_text data-v-c5067764">我的账户</text>
+      </view>
+      <view class="_view data-v-c5067764 uni-xx-item" bindtap="handleProxy" data-eventid="{{'fl6-6'}}" data-comkey="{{$k}}">
+        <uni-icon class="_uni-icon data-v-c5067764 iconfonts icon-tubiaozhizuo-1"></uni-icon>
+        <text class="_text data-v-c5067764">我的收藏</text>
+      </view>
+      <view class="_view data-v-c5067764 uni-xx-item" bindtap="handleProxy" data-eventid="{{'zuM-7'}}" data-comkey="{{$k}}">
+        <uni-icon class="_uni-icon data-v-c5067764 iconfonts icon-tubiaozhizuo-2"></uni-icon>
+        <text class="_text data-v-c5067764">系统信息</text>
+      </view>
+    </view>
+    <view class="_view data-v-c5067764 uni-user-item uni-bz-content">
+      <view class="_view data-v-c5067764 uni-xx-item" bindtap="handleProxy" data-eventid="{{'nGk-8'}}" data-comkey="{{$k}}">
+        <uni-icon class="_uni-icon data-v-c5067764 iconfonts icon-tubiaozhizuo-3"></uni-icon>
+        <text class="_text data-v-c5067764">帮助中心</text>
+      </view>
+      <view class="_view data-v-c5067764 uni-xx-item">
+        <uni-icon class="_uni-icon data-v-c5067764 iconfonts icon-tubiaozhizuo-4"></uni-icon>
+        <text class="_text data-v-c5067764">联系客服</text>
+      </view>
+      <view class="_view data-v-c5067764 uni-xx-item" bindtap="handleProxy" data-eventid="{{'c0K-9'}}" data-comkey="{{$k}}">
+        <uni-icon class="_uni-icon data-v-c5067764 iconfonts icon-tubiaozhizuo-5"></uni-icon>
+        <text class="_text data-v-c5067764">账户安全</text>
+      </view>
+    </view>
+    <view class="_view data-v-c5067764 uni-user-item uni-tc-but" bindtap="handleProxy" data-eventid="{{'Yle-10'}}" data-comkey="{{$k}}">
+      <view class="_view data-v-c5067764 uni-xx-item">
+        <uni-icon class="_uni-icon data-v-c5067764 iconfonts icon-tubiaozhizuo-6"></uni-icon>
+        <text class="_text data-v-c5067764">退出登录</text>
+      </view>
+    </view>
+  </view>
+</template>

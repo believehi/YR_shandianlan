@@ -1,0 +1,32 @@
+<template name="0645bdc5">
+  <view class="_view data-v-509496c0 content">
+    <view class="_view data-v-509496c0 uni-jl-list">
+      <view class="_view data-v-509496c0 uni-jl-item">
+        <text class="_text data-v-509496c0 uni-jl">每日登陆奖励</text>
+        <button type="primary" class="_button data-v-509496c0">领取</button>
+      </view>
+    </view>
+    <view class="_view data-v-509496c0 uni-jl-list uni-jl-list1">
+      <view class="_view data-v-509496c0 uni-jl-item">
+        <text class="_text data-v-509496c0 uni-jl">绑定手机号奖励</text>
+        <text class="_text data-v-509496c0 uni-jl-sum">+ 0.5太阳币</text>
+        <uni-icon class="_uni-icon data-v-509496c0 iconfont-2 icon-you"></uni-icon>
+      </view>
+      <view class="_view data-v-509496c0 uni-jl-item">
+        <text class="_text data-v-509496c0 uni-jl">绑定银行卡奖励</text>
+        <text class="_text data-v-509496c0 uni-jl-sum">+ 2太阳币</text>
+        <uni-icon class="_uni-icon data-v-509496c0 iconfont-2 icon-you"></uni-icon>
+      </view>
+      <view class="_view data-v-509496c0 uni-jl-item">
+        <text class="_text data-v-509496c0 uni-jl">绑定身份证号码奖励</text>
+        <text class="_text data-v-509496c0 uni-jl-sum">+ 2太阳币</text>
+        <uni-icon class="_uni-icon data-v-509496c0 iconfont-2 icon-you"></uni-icon>
+      </view>
+      <view class="_view data-v-509496c0 uni-jl-item">
+        <text class="_text data-v-509496c0 uni-jl">绑定支付宝奖励</text>
+        <text class="_text data-v-509496c0 uni-jl-sum">+ 0.5太阳币</text>
+        <uni-icon class="_uni-icon data-v-509496c0 iconfont-2 icon-you"></uni-icon>
+      </view>
+    </view>
+  </view>
+</template>

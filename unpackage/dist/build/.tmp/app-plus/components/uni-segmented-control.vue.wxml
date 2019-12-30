@@ -1,0 +1,3 @@
+<template name="45c42f77"><view class="_view 45c42f77 segmented-control {{styleType}}" style=" {{wrapStyle}}"><view class="_view 45c42f77 segmented-control-item {{styleType}}" wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'45c42f77-0-'+index}}" data-comkey="{{$k}}" wx:for="{{values}}" wx:for-index="index" wx:for-item="item" style=" {{index === currentIndex ? activeStyle : itemStyle}}">
+		{{item}}
+	</view></view></template>

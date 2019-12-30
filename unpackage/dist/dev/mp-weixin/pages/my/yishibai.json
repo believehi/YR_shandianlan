@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "已失败",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "enablePullDownRefresh": true
+}

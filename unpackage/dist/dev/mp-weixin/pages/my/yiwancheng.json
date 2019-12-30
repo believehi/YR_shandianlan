@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "已完成",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "enablePullDownRefresh": true
+}

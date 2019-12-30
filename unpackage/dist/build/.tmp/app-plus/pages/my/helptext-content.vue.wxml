@@ -1,0 +1,1 @@
+<template name="190e3f87"><view class="_view 190e3f87 content"><view class="_view 190e3f87 uni-content"><view class="_view 190e3f87 uni-title"><text class="_text 190e3f87 uni-title-1">{{PlanArray.Title}}</text></view><view class="_view 190e3f87 uni-text-content"><text class="_text 190e3f87">{{PlanArray.Pictures}}</text></view></view></view></template>

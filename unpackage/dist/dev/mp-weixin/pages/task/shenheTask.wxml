@@ -1,0 +1,2 @@
+<import src="./shenheTask.vue.wxml" />
+    <template is="e2af8ab6" data="{{ ...$root['0'], $root }}"/>

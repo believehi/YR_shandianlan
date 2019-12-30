@@ -1,0 +1,2 @@
+<import src="./xiugaiphone.vue.wxml" />
+    <template is="37ec7fe5" data="{{ ...$root['0'], $root }}"/>

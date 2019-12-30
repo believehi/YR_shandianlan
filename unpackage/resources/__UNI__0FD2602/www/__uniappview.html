@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="UTF-8" />
+        <script>
+            var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') || CSS.supports('top: constant(a)'))
+            document.write('<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' + (coverSupport ? ', viewport-fit=cover' : '') + '" />')
+        </script>
+        <title>View</title>
+        <style>
+            * {
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            input[type="search"i]::-webkit-search-cancel-button {
+                display: none;
+            }
+
+        </style>
+        <script>
+            var __wxConfig = {"debug":false,"appname":"闪电懒","entryPagePath":"pages/index/index.html","page":{"pages/index/index.html":{"window":{"navigationBarTitleText":"闪电懒","enablePullDownRefresh":true}},"pages/task/Task.html":{"window":{"navigationBarTitleText":"任务","enablePullDownRefresh":true}},"pages/my/My.html":{"window":{"navigationBarTitleText":"我的","enablePullDownRefresh":true}},"pages/Login/login.html":{"window":{"navigationBarTitleText":"登录","navigationBarBackgroundColor":"#FFFFFF"}},"pages/Login/register.html":{"window":{"navigationBarTitleText":"注册","navigationBarBackgroundColor":"#FFFFFF"}},"pages/Login/phonelogin.html":{"window":{"navigationBarTitleText":"登录","navigationBarBackgroundColor":"#FFFFFF"}},"pages/Tixian/tixianindex.html":{"window":{"navigationBarTitleText":"提现","navigationBarBackgroundColor":"#FFFFFF"}},"pages/Tixian/wxtixian.html":{"window":{"navigationBarTitleText":"微信提现","navigationBarBackgroundColor":"#FFFFFF"}},"pages/Tixian/aliplaytixian.html":{"window":{"navigationBarTitleText":"支付宝提现","navigationBarBackgroundColor":"#FFFFFF"}},"pages/my/personaldata.html":{"window":{"navigationBarTitleText":"个人资料","navigationBarBackgroundColor":"#FFFFFF"}},"pages/my/myaccount.html":{"window":{"navigationBarTitleText":"我的账户","navigationBarBackgroundColor":"#FFFFFF"}},"pages/my/myincome.html":{"window":{"navigationBarTitleText":"收入记录","navigationBarBackgroundColor":"#FFFFFF","enablePullDownRefresh":true}},"pages/my/mytixian.html":{"window":{"navigationBarTitleText":"提现记录","navigationBarBackgroundColor":"#FFFFFF"}},"pages/my/mycollect.html":{"window":{"navigationBarTitleText":"我的收藏","navigationBarBackgroundColor":"#FFFFFF"}},"pages/my/messages.html":{"window":{"navigationBarTitleText":"系统消息","navigationBarBackgroundColor":"#FFFFFF"}},"pages/my/messages-content.html":{"window":{"navigationBarTitleText":"系统消息","navigationBarBackgroundColor":"#FFFFFF"}},"pages/my/help.html":{"window":{"navigationBarTitleText":"帮助中心","navigationBarBackgroundColor":"#FFFFFF"}},"pages/my/help-text.html":{"window":{"navigationBarTitleText":"帮助中心","navigationBarBackgroundColor":"#FFFFFF"}},"pages/my/help-video.html":{"window":{"navigationBarTitleText":"帮助中心","navigationBarBackgroundColor":"#FFFFFF"}},"pages/my/help-video-content.html":{"window":{"navigationBarTitleText":"帮助中心","navigationBarBackgroundColor":"#FFFFFF"}},"pages/my/zhanghuanquan.html":{"window":{"navigationBarTitleText":"账户安全","navigationBarBackgroundColor":"#FFFFFF"}},"pages/my/xiugaipassword.html":{"window":{"navigationBarTitleText":"修改密码","navigationBarBackgroundColor":"#FFFFFF"}},"pages/my/xiugaiphone.html":{"window":{"navigationBarTitleText":"修改手机号","navigationBarBackgroundColor":"#FFFFFF"}},"pages/my/xiugaiphonetwo.html":{"window":{"navigationBarTitleText":"绑定手机","navigationBarBackgroundColor":"#FFFFFF"}},"pages/my/resetpassword.html":{"window":{"navigationBarTitleText":"重置密码","navigationBarBackgroundColor":"#FFFFFF"}},"pages/index/lingqujiangli.html":{"window":{"navigationBarTitleText":"领取奖励","navigationBarBackgroundColor":"#FFFFFF"}},"pages/index/bawangcan.html":{"window":{"navigationBarTitleText":"霸王餐","navigationBarBackgroundColor":"#FFFFFF","enablePullDownRefresh":true}},"pages/my/yilingqu.html":{"window":{"navigationBarTitleText":"已领取","navigationBarBackgroundColor":"#FFFFFF","enablePullDownRefresh":true}},"pages/my/daishenhe.html":{"window":{"navigationBarTitleText":"待审核","navigationBarBackgroundColor":"#FFFFFF","enablePullDownRefresh":true}},"pages/my/yiwancheng.html":{"window":{"navigationBarTitleText":"已完成","navigationBarBackgroundColor":"#FFFFFF","enablePullDownRefresh":true}},"pages/my/yishibai.html":{"window":{"navigationBarTitleText":"已失败","navigationBarBackgroundColor":"#FFFFFF","enablePullDownRefresh":true}},"pages/task/mytask.html":{"window":{"navigationBarTitleText":"我的任务","navigationBarBackgroundColor":"#FFFFFF","enablePullDownRefresh":true}},"pages/task/Taskdetails.html":{"window":{"navigationBarTitleText":"任务详情","navigationBarBackgroundColor":"#FFFFFF"}},"pages/task/YilinquTask.html":{"window":{"navigationBarTitleText":"任务详情","navigationBarBackgroundColor":"#FFFFFF"}},"pages/task/shenheTask.html":{"window":{"navigationBarTitleText":"任务详情","navigationBarBackgroundColor":"#FFFFFF"}},"pages/my/Domain.html":{"window":{"navigationBarTitleText":"擅长领域","navigationBarBackgroundColor":"#FFFFFF"}},"pages/my/AddDomain.html":{"window":{"navigationBarTitleText":"擅长领域","navigationBarBackgroundColor":"#FFFFFF"}},"pages/my/Domaindetails.html":{"window":{"navigationBarTitleText":"擅长领域","navigationBarBackgroundColor":"#FFFFFF"}},"pages/my/tianxiepassword.html":{"window":{"navigationBarTitleText":"填写密码","navigationBarBackgroundColor":"#FFFFFF"}},"pages/my/tianxiepassword1.html":{"window":{"navigationBarTitleText":"填写密码","navigationBarBackgroundColor":"#FFFFFF"}},"pages/my/Tiephone.html":{"window":{"navigationBarTitleText":"绑定手机号","navigationBarBackgroundColor":"#FFFFFF"}},"pages/my/helptext-content.html":{"window":{"navigationBarTitleText":"帮助中心","navigationBarBackgroundColor":"#FFFFFF"}}},"global":{"window":{"navigationBarTextStyle":"black","navigationBarTitleText":"Hello uniapp","navigationBarBackgroundColor":"#f4c336","backgroundColor":"#f4c336"}},"tabBar":{"color":"#000000","selectedColor":"#000000","backgroundColor":"#ffffff","borderStyle":"black","list":[{"pagePath":"pages/index/index.html","iconPath":"static/Home.png","selectedIconPath":"static/Homes.png","text":"首页"},{"pagePath":"pages/task/Task.html","iconPath":"static/tesk.png","selectedIconPath":"static/tesks.png","text":"任务"},{"pagePath":"pages/my/My.html","iconPath":"static/my.png","selectedIconPath":"static/mys.png","text":"我的"}],"position":"bottom"},"networkTimeout":{"request":60000,"connectSocket":60000,"uploadFile":60000,"downloadFile":60000},"platform":"devtools","pages":["pages/index/index","pages/task/Task","pages/my/My","pages/Login/login","pages/Login/register","pages/Login/phonelogin","pages/Tixian/tixianindex","pages/Tixian/wxtixian","pages/Tixian/aliplaytixian","pages/my/personaldata","pages/my/myaccount","pages/my/myincome","pages/my/mytixian","pages/my/mycollect","pages/my/messages","pages/my/messages-content","pages/my/help","pages/my/help-text","pages/my/help-video","pages/my/help-video-content","pages/my/zhanghuanquan","pages/my/xiugaipassword","pages/my/xiugaiphone","pages/my/xiugaiphonetwo","pages/my/resetpassword","pages/index/lingqujiangli","pages/index/bawangcan","pages/my/yilingqu","pages/my/daishenhe","pages/my/yiwancheng","pages/my/yishibai","pages/task/mytask","pages/task/Taskdetails","pages/task/YilinquTask","pages/task/shenheTask","pages/my/Domain","pages/my/AddDomain","pages/my/Domaindetails","pages/my/tianxiepassword","pages/my/tianxiepassword1","pages/my/Tiephone","pages/my/helptext-content"],"subPackages":[],"splashscreen":{"autoclose":true}}
+
+        </script>
+        <script>
+            var __id__ = '';
+            window.__dispatchGenerateFunc__ = function(page) {
+                __id__ = page;
+                document.title = page;
+                // window.history.pushState('', '', page);
+                plus.webview.currentWebview().setJsFile('_www/' + page.replace('.html', '.js'));
+            };
+
+        </script>
+        <script src="__uniappes6.js"></script>
+        <script src="uniapp://ready"></script>
+    </head>
+
+    <body>
+        <div></div>
+    </body>
+
+</html>

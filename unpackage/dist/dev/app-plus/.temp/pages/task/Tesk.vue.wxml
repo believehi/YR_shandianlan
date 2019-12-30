@@ -1,0 +1,106 @@
+<import src="/components/uni-segmented-control.vue.wxml" />
+<template name="5eab27de">
+  <view class="_view data-v-516a88b2">
+    <template bindclickItem="handleProxy" style-type="button" active-color="#4cd964" data-eventid="{{'TEn-0'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'mj8-0'],$root}}" is="aabd4bf4"></template>
+    <view class="_view data-v-516a88b2 content">
+      <view hidden="{{!(current === 0)}}" class="_view data-v-516a88b2">
+        <view class="_view data-v-516a88b2 uni-rw-list">
+          <view class="_view data-v-516a88b2 uni-rw-cont">
+            <image src="../../static/tuzi.jpg" mode class="_image data-v-516a88b2"></image>
+            <view class="_view data-v-516a88b2 uni-rw-text">
+              <text class="_text data-v-516a88b2 Text_Nowrap">麻麻辣辣，巴适得板，杭城川食大典进行时</text>
+              <view class="_view data-v-516a88b2 uni-rw-sl">
+                <view class="_view data-v-516a88b2">1-2人</view>
+                <view class="_view data-v-516a88b2">5天内</view>
+                <view class="_view data-v-516a88b2">还剩
+                  <text class="_text data-v-516a88b2">3</text>份</view>
+              </view>
+            </view>
+            <button type="primary" class="_button data-v-516a88b2">领取</button>
+          </view>
+          <view class="_view data-v-516a88b2 uni-rw-cont">
+            <image src mode class="_image data-v-516a88b2"></image>
+            <view class="_view data-v-516a88b2 uni-rw-text">
+              <text class="_text data-v-516a88b2 Text_Nowrap">热爱不变，热辣开年，上海撸串小分队出动</text>
+              <view class="_view data-v-516a88b2 uni-rw-sl">
+                <view class="_view data-v-516a88b2">1-2人</view>
+                <view class="_view data-v-516a88b2">5天内</view>
+                <view class="_view data-v-516a88b2">还剩
+                  <text class="_text data-v-516a88b2">3</text>份</view>
+              </view>
+            </view>
+            <button type="primary" class="_button data-v-516a88b2">领取</button>
+          </view>
+          <view class="_view data-v-516a88b2 uni-rw-cont">
+            <image src mode class="_image data-v-516a88b2"></image>
+            <view class="_view data-v-516a88b2 uni-rw-text">
+              <text class="_text data-v-516a88b2 Text_Nowrap">晨起一盏粥，午间一碗面，唤醒腊八，杭城荐食</text>
+              <view class="_view data-v-516a88b2 uni-rw-sl">
+                <view class="_view data-v-516a88b2">1-2人</view>
+                <view class="_view data-v-516a88b2">5天内</view>
+                <view class="_view data-v-516a88b2">还剩
+                  <text class="_text data-v-516a88b2">3</text>份</view>
+              </view>
+            </view>
+            <button type="primary" class="_button data-v-516a88b2">领取</button>
+          </view>
+          <view class="_view data-v-516a88b2 uni-rw-cont">
+            <image src mode class="_image data-v-516a88b2"></image>
+            <view class="_view data-v-516a88b2 uni-rw-text">
+              <text class="_text data-v-516a88b2 Text_Nowrap">冻手or动手？成都火锅征集令，美食家ers速速报名……</text>
+              <view class="_view data-v-516a88b2 uni-rw-sl">
+                <view class="_view data-v-516a88b2">1-2人</view>
+                <view class="_view data-v-516a88b2">5天内</view>
+                <view class="_view data-v-516a88b2">还剩
+                  <text class="_text data-v-516a88b2">3</text>份</view>
+              </view>
+            </view>
+            <button type="primary" class="_button data-v-516a88b2">领取</button>
+          </view>
+          <view class="_view data-v-516a88b2 uni-rw-cont">
+            <image src mode class="_image data-v-516a88b2"></image>
+            <view class="_view data-v-516a88b2 uni-rw-text">
+              <text class="_text data-v-516a88b2 Text_Nowrap">冻手or动手？成都火锅征集令，美食家ers速速报名……</text>
+              <view class="_view data-v-516a88b2 uni-rw-sl">
+                <view class="_view data-v-516a88b2">1-2人</view>
+                <view class="_view data-v-516a88b2">5天内</view>
+                <view class="_view data-v-516a88b2">还剩
+                  <text class="_text data-v-516a88b2">3</text>份</view>
+              </view>
+            </view>
+            <button type="primary" class="_button data-v-516a88b2">领取</button>
+          </view>
+          <view class="_view data-v-516a88b2 uni-rw-cont">
+            <image src mode class="_image data-v-516a88b2"></image>
+            <view class="_view data-v-516a88b2 uni-rw-text">
+              <text class="_text data-v-516a88b2 Text_Nowrap">晨起一盏粥，午间一碗面，唤醒腊八，杭城荐食</text>
+              <view class="_view data-v-516a88b2 uni-rw-sl">
+                <view class="_view data-v-516a88b2">1-2人</view>
+                <view class="_view data-v-516a88b2">5天内</view>
+                <view class="_view data-v-516a88b2">还剩
+                  <text class="_text data-v-516a88b2">3</text>份</view>
+              </view>
+            </view>
+            <button type="primary" class="_button data-v-516a88b2">领取</button>
+          </view>
+          <view class="_view data-v-516a88b2 uni-rw-cont">
+            <image src mode class="_image data-v-516a88b2"></image>
+            <view class="_view data-v-516a88b2 uni-rw-text">
+              <text class="_text data-v-516a88b2 Text_Nowrap">热爱不变，热辣开年，上海撸串小分队出动</text>
+              <view class="_view data-v-516a88b2 uni-rw-sl">
+                <view class="_view data-v-516a88b2">1-2人</view>
+                <view class="_view data-v-516a88b2">5天内</view>
+                <view class="_view data-v-516a88b2">还剩
+                  <text class="_text data-v-516a88b2">3</text>份</view>
+              </view>
+            </view>
+            <button type="primary" class="_button data-v-516a88b2">领取</button>
+          </view>
+        </view>
+      </view>
+      <view hidden="{{!(current === 1)}}" class="_view data-v-516a88b2"> 选项卡2的内容 </view>
+      <view hidden="{{!(current === 2)}}" class="_view data-v-516a88b2"> 选项卡3的内容 </view>
+      <view hidden="{{!(current === 3)}}" class="_view data-v-516a88b2"> 选项卡4的内容 </view>
+    </view>
+  </view>
+</template>

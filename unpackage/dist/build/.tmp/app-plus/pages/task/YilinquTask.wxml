@@ -1,0 +1,2 @@
+<import src="./YilinquTask.vue.wxml" />
+    <template is="0f61a536" data="{{ ...$root['0'], $root }}"/>

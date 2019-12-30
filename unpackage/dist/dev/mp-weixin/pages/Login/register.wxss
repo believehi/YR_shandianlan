@@ -1,0 +1,122 @@
+
+.button-item {
+	text-align: center !important;
+}
+.logo {
+	height: 200rpx;
+	width: 200rpx;
+	margin-top: 200rpx;
+}
+.title {
+	font-size: 36rpx;
+	color: #8f8f94;
+}
+.uni-domain-list input {
+	width: 400rpx !important;
+}
+.uni-form-items input {
+	width: 150rpx !important;
+	text-align: center;
+	border: 1px solid #9a9a9a;
+	border-radius: 30rpx;
+	font-size: 25rpx;
+	height: 50rpx !important;
+}
+.uni-pt {
+	color: #8f8f94 !important;
+}
+.uni-pts {
+	color: #000000 !important;
+}
+.uni-reg-content {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+.uni-reg-list {
+	padding-top: 80rpx;
+}
+.uni-reg-list .uni-form-item {
+	margin-bottom: 45rpx;
+	position: relative;
+}
+.uni-reg-list .message_code_gain {
+	position: absolute;
+	top: -20rpx;
+	right: 0;
+	height: 60rpx;
+	background-color: #ffca30;
+	border-radius: 30rpx;
+	font-size: 28rpx;
+	border: solid 1rpx #dbdbdc;
+	color: #3c3c3c;
+	text-align: center;
+	line-height: 60rpx;
+	z-index: 999;
+		padding: 0 20rpx;
+}
+.uni-reg-list .uni-form-item input {
+	width: 610rpx;
+	border-bottom: 1rpx solid #9a9a9a;
+	padding-bottom: 5rpx;
+	font-size: 30rpx;
+}
+.uni-menu-box {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	padding-top: 40rpx;
+}
+.uni-pt {
+	font-size: 30rpx;
+	color: #9a9a9a;
+}
+.uni-menu-mt {
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.uni-menu-mt text {
+	font-size: 30rpx;
+	color: #3c3c3c;
+	margin-right: 20rpx;
+}
+.uni-menu-mt .uni-menu-but {
+	width: 155rpx;
+	height: 52rpx;
+	background-color: #ffca2f;
+	border-radius: 26rpx;
+	font-size: 28rpx;
+	line-height: 52rpx;
+	padding-left: 20rpx;
+}
+.uni-zc-but button {
+	height: 76rpx;
+	background-color: #ffca2f;
+	border-radius: 38rpx;
+	line-height: 76rpx;
+	letter-spacing: 2rpx;
+	font-size: 34rpx;
+	margin: 225rpx 0 33rpx 0;
+}
+.button-hover {
+	background-color: rgba(0, 0, 0, 0.1);
+	opacity: 0.7;
+}
+.uni-login-but {
+	font-size: 28rpx;
+	color: #3C3C3C;
+	text-align: center;
+}
+
