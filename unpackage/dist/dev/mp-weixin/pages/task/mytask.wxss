@@ -230,6 +230,7 @@
 
 
 
+
 /* 内容背景色 */
 .content {
 	background: #f5f5f5;
@@ -241,22 +242,18 @@
 .segmented-control {
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	-webkit-flex-direction: row;
-	    -ms-flex-direction: row;
 	        flex-direction: row;
 	-webkit-box-pack: center;
 	-webkit-justify-content: center;
-	    -ms-flex-pack: center;
 	        justify-content: center;
 	width: 100%;
 	font-size: 26rpx;
 	border-radius: 10rpx;
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+	box-sizing: border-box;
 	margin: 0 auto;
 	overflow: hidden;
 	height: 135rpx;
@@ -271,12 +268,10 @@
 .segmented-control-item {
 	-webkit-box-flex: 1;
 	-webkit-flex: 1;
-	    -ms-flex: 1;
 	        flex: 1;
 	text-align: center;
 	line-height: 190rpx;
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+	box-sizing: border-box;
 	position: relative;
 }
 .segmented-control-item.text {
@@ -334,14 +329,13 @@
 }
 .uni-rw-time text {
 	font-size: 26rpx;
-	color: #ff533c;
+	color: #2FB6A7;
 }
 .uni-rw-text .Text_Nowrap {
 	width: 380rpx;
 	display: inline-block;
 	-webkit-box-align: end;
 	-webkit-align-items: flex-end;
-	    -ms-flex-align: end;
 	        align-items: flex-end;
 }
 .uni-rw-text:after {

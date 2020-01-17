@@ -17,7 +17,7 @@
 			<text class="uni-tx-notice">提现须知：</text>
 			<text>1、提现需要3个工作日审核后到账</text>
 			<text>2、需要绑定手机号和微信才可以提现</text>
-			<text>3、太阳币相当于您的余额，1太阳币=1元</text>
+			<text>3、闪电币相当于您的余额，1闪电币=1元</text>
 			<text>4、如果有问题请联系客服反映</text>
 		</view>
 	</view>

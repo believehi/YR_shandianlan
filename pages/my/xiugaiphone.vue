@@ -21,6 +21,7 @@
 				phone: '',
 				tipsCode: "获取验证码",
 				code: '',
+				code:'',
 				codestr: '',
 				timeNum: 60,
 				clikType: false,
@@ -44,20 +45,21 @@
 					});
 					return;
 				} else if (!that.clikType) {
+					that.getTime();
 					that.codestr = helper.MathRand(4);
 					that.clikType = true;
 					uni.request({
-						url: 'http://utf8.api.smschinese.cn/',
+						url:helper.websiteUrl+'send/sendcode',
 						method: 'GET',
 						data: {
-							Uid: "xingjiushenqi",
-							Key: "d41d8cd98f00b204e980",
-							smsMob: that.phone,
-							smsText: "您的验证码为：" + that.codestr + "，有效期5分钟"
+							loginMark: helper.getloginMark(),
+							token: '',
+							data: '{"phone": "' + that.phone + '"}'
 						},
 						success: res => {
-							if (res.data == "1") {
-								that.getTime()
+							if (res.data.code == 200) {
+								
+								this.codes = res.data.info;
 							} else {
 								uni.showToast({
 									icon: 'none',
@@ -98,7 +100,7 @@
 					});
 					return;
 				}
-				if (this.code == "" || this.code != this.codestr || this.codestr !=
+				if (this.code == "" || this.code != this.codes || this.codes !=
 					this.code) {
 					uni.showToast({
 						icon: 'none',

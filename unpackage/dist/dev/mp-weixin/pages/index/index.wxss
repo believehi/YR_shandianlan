@@ -1,204 +1,22 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.uni-rw-text .Text_Nowrap {
+	width: 425rpx;
+	display: inline-block;
+	-webkit-box-align: end;
+	-webkit-align-items: flex-end;
+	        align-items: flex-end;
+}
 
 /* 用户信息 */
 .uni-card-header {
-	background: #f4c336;
+	background-color: #2FB6A7;
 	height: 130rpx;
 	width: 100%;
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-pack: center;
 	-webkit-justify-content: center;
-	    -ms-flex-pack: center;
 	        justify-content: center;
 }
 .uni-card-content {
@@ -207,8 +25,7 @@
 	height: 215rpx;
 	background: red;
 	background-color: #ffffff;
-	-webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.06);
-	        box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.06);
+	box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.06);
 	border-top-left-radius: 20rpx;
 	border-top-right-radius: 20rpx;
 	border-bottom-left-radius: 20rpx;
@@ -217,23 +34,20 @@
 }
 .uni-user-img {
 	-webkit-align-content: stretch;
-	    -ms-flex-line-pack: stretch;
 	        align-content: stretch;
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 }
 .uni-Taiyanbi {
 	-webkit-box-align: center;
 	-webkit-align-items: center;
-	    -ms-flex-align: center;
 	        align-items: center;
 	margin: 24rpx 0;
 }
 .uni-Taiyanbi text {
 	font-size: 45rpx;
-	color: #fb8d44;
+	color: #2FB6A7;
 	margin-left: 20rpx;
 }
 .uni-user-img image {
@@ -252,7 +66,7 @@
 	border-radius: 25rpx;
 	font-size: 28rpx;
 	line-height: 52rpx;
-	background-color: #fb8d44;
+	background-color: #2FB6A7;
 	border: none;
 	font-family: SourceHanSansSC-Regular;
 	width: 115rpx;
@@ -265,7 +79,7 @@
 	font-size: 24rpx;
 	color: #b6b6b6;
 }
-.uni-rw-sl vie .uni-fgx:after {
+.uni-rw-sl view .uni-fgx:after {
 	content: "";
 	width: 1rpx;
 	height: 16rpx;
@@ -282,6 +96,7 @@
 .uni-shouyi text:nth-child(2) {
 	padding-left: 35rpx;
 }
+
 /* 活动信息 */
 .uni-hd-content {
 	padding-top: 137rpx;
@@ -289,15 +104,12 @@
 .uni-but-list {
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-pack: center;
 	-webkit-justify-content: center;
-	    -ms-flex-pack: center;
 	        justify-content: center;
 	-webkit-box-align: end;
 	-webkit-align-items: flex-end;
-	    -ms-flex-align: end;
 	        align-items: flex-end;
 	padding: 45rpx 0;
 }
@@ -316,18 +128,15 @@
 .uni-hd-img {
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-pack: center;
 	-webkit-justify-content: center;
-	    -ms-flex-pack: center;
 	        justify-content: center;
 }
 .uni-hd-img image {
 	width: 337rpx;
 	height: 186rpx;
-	-webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.06);
-	        box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.06);
+	box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.06);
 	border-radius: 20rpx;
 }
 .uni-hd-img image:nth-child(1) {

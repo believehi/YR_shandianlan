@@ -1,0 +1,2 @@
+<import src="./MerLogin.vue.wxml" />
+    <template is="0c7a30aa" data="{{ ...$root['0'], $root }}"/>

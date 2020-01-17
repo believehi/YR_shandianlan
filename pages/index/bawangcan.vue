@@ -5,7 +5,7 @@
 			<view class="uni-rw-cont" @tap="openrwid" :data-rwid="item.ID">
 				<image :src="item.thumbnail"></image>
 				<view class="uni-rw-text">
-					<text class="Text_Nowrap">{{item.TaskName}}</text>
+					<text class="Text_Nowrap uni-rw-text1">{{item.TaskName}}</text>
 					<view class="uni-rw-sl">
 						<view>{{item.PeopleMin}}-{{item.PeopleMax}}人</view>
 						<view>{{item.Days}}天内</view>
@@ -26,19 +26,48 @@
 			return {
 				fenleiArray: {}, //分类列表菜单
 				isActive: "1", //分类列表初始选中状态
-				rwlistArray: "", //任务列表数据
+				rwlistArray: [{
+						ID: 0,
+						TaskName: "小龙坎美团五星好评送五折卷",
+						PeopleMin: 1,
+						PeopleMax: 2,
+						Days: 5,
+						Surplus: 21
+					},
+					{
+						ID: 1,
+						TaskName: "西贝美团五星好评送五折卷",
+						PeopleMin: 1,
+						PeopleMax: 2,
+						Days: 5,
+						Surplus: 21
+					},
+					{
+						ID: 2,
+						TaskName: "小龙坎美团五星好评送五折卷",
+						PeopleMin: 1,
+						PeopleMax: 2,
+						Days: 5,
+						Surplus: 21
+					}
+				],
+				//任务列表数据
 				num: '9',        //默认显示9条任务数据
 				bottomtisi:''
 			}
 		},
 		onLoad() {
-			this.fenleilists()
+			// this.fenleilists()
 		},
 		onShow(){
-			this.fenleilists()
+			// this.fenleilists()
 		},
 		onPullDownRefresh: function() { //下拉刷新
 			this.fenleilists(true);
+			uni.showLoading({
+				title: "刷新中",
+				mask: true
+			})
 		},
 		//触底事件
 		onReachBottom() {                     
@@ -53,7 +82,7 @@
 					url: '../task/Taskdetails?rwid=' + e.currentTarget.dataset.rwid,
 				});
 			},
-			fenleilists(e,isdown) {
+			fenleilists(isdown) {
 				helper.islogin(true);
 				uni.showLoading({
 					title: "加载中.....",

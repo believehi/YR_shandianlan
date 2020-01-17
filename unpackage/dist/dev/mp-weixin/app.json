@@ -1,6 +1,16 @@
 {
   "pages": [
+    "pages/index/video",
     "pages/Login/login",
+    "pages/index/radarMap",
+    "pages/TaskList/TaskList",
+    "pages/TaskList/QQ",
+    "pages/TaskList/dazhong",
+    "pages/TaskList/douyin",
+    "pages/TaskList/meituan",
+    "pages/TaskList/weibo",
+    "pages/TaskList/weixin",
+    "pages/TaskList/xiaohongshu",
     "pages/index/index",
     "pages/task/Task",
     "pages/my/My",
@@ -41,16 +51,38 @@
     "pages/my/tianxiepassword",
     "pages/my/tianxiepassword1",
     "pages/my/Tiephone",
-    "pages/my/helptext-content"
+    "pages/my/helptext-content",
+    "pages/Login/MerPhoneLogin",
+    "pages/Login/MerLogin",
+    "pages/Merchant/MerIndex",
+    "pages/Merchant/voucher",
+    "pages/Merchant/NewProjects",
+    "pages/Merchant/Unclaimed",
+    "pages/Merchant/YetUnclaimed",
+    "pages/Merchant/Completed",
+    "pages/Merchant/MerTask",
+    "pages/Merchant/MerInfo",
+    "pages/Merchant/MerInfoData",
+    "pages/Login/MerRegister",
+    "pages/Merchant/MerPayRank",
+    "pages/Merchant/MerSafety",
+    "pages/Merchant/Changepassword",
+    "pages/Merchant/MerResetpass",
+    "pages/Merchant/MerResetpass2",
+    "pages/Merchant/Changephone",
+    "pages/Merchant/Changephone2",
+    "pages/Merchant/ToReceive",
+    "pages/Merchant/Taskdetail",
+    "pages/Merchant/DetailsReceived",
+    "pages/Merchant/TaskDone"
   ],
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "Hello uniapp",
     "navigationBarBackgroundColor": "#f4c336",
-    "backgroundColor": "#f4c336"
+    "backgroundColor": "#2FB6A7"
   },
-  "usingComponents": {},
   "tabBar": {
     "color": "#000000",
     "selectedColor": "#000000",
@@ -67,7 +99,7 @@
         "pagePath": "pages/task/Task",
         "iconPath": "static/tesk.png",
         "selectedIconPath": "static/tesks.png",
-        "text": "任务"
+        "text": "活动"
       },
       {
         "pagePath": "pages/my/My",
@@ -77,5 +109,17 @@
       }
     ]
   },
-  "sitemapLocation": "sitemap.json"
+  "permission": {
+    "scope.userLocation": {
+      "desc": "申请"
+    }
+  },
+  "plugins": {
+    "tencentvideo": {
+      "version": "1.2.4",
+      "provider": "wxa75efa648b60994b"
+    }
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap19.json"
 }

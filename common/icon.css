@@ -2,14 +2,14 @@
     .Text_Nowraps{text-overflow:ellipsis;display:-webkit-box; -webkit-box-orient:vertical;-webkit-line-clamp:3;overflow: hidden;}
 	.Qian_icon{background: url(http://lx97.cn/static/qian.png) no-repeat;width: 43upx;height: 43upx;background-size: 100% 100%;}
 	/* 首页图标 */
-	.uni-rw-but{background: url(http://lx97.cn/static/rwbut.png) no-repeat;width: 54upx;height: 67upx;background-size: 100% 100%;display: inline-block;}
-	.uni-lq-but{background: url(http://lx97.cn/static/jlbut.png) no-repeat;width: 56upx;height: 58upx;background-size: 100% 100%;display: inline-block;}
-	.uni-bw-but{background: url(http://lx97.cn/static/bwcbut.png) no-repeat;width: 70upx;height: 59upx;background-size: 100% 100%;display: inline-block;}
+	.uni-rw-but{background: url(./static/rwbut.png) no-repeat;width: 54upx;height: 67upx;background-size: 100% 100%;display: inline-block;}
+	.uni-lq-but{background: url(./static/bwcbut.png) no-repeat;width: 56upx;height: 58upx;background-size: 100% 100%;display: inline-block;}
+	.uni-bw-but{background: url(./static/jlbut.png) no-repeat;width: 70upx;height: 59upx;background-size: 100% 100%;display: inline-block;}
 	/* 登录注册图标 */
-	.uni-zh-input{background: url(http://lx97.cn/static/phone.png) no-repeat left ;background-size: 26upx 40upx;width: 26upx;height: 40upx;display: inline-block;}
-	.uni-pw-input{background: url(http://lx97.cn/static/password.png)  no-repeat left;background-size: 31upx 38upx;width: 31upx;height: 40upx;display: inline-block;}
+	.uni-zh-input{background: url(./static/phone.png) no-repeat left ;background-size: 26upx 40upx;width: 26upx;height: 40upx;display: inline-block;}
+	.uni-pw-input{background: url(./static/password.png)  no-repeat left;background-size: 31upx 38upx;width: 31upx;height: 40upx;display: inline-block;}
 	/* 微信快捷登陆图标 */
-	.uni-wx-icon{background: url(http://lx97.cn/static/wxicon.png) no-repeat;background-size: 81upx 81upx;width: 81upx;height: 81upx;display: inline-block;}
+	.uni-wx-icon{background: url(./static/wxsicon.png) no-repeat;background-size: 81upx 81upx;width: 81upx;height: 81upx;display: inline-block;}
 	/* 短信图标 */
 	.uni-phone-input{background: url(http://lx97.cn/static/yzmicon.png) no-repeat;background-size: 34upx 38upx;width: 34upx;height: 38upx;display: inline-block;}
 	/* 下拉三角形图标 */
@@ -31,5 +31,16 @@
 	.uni-sctp-icon{background: url(http://lx97.cn/static/shangchuan.png) no-repeat center;background-size: 119upx 119upx;width: 119upx;height: 119upx;display: inline-block;}
 	/* 添加icon */
 	.uni-Tj-icon{background: url(http://lx97.cn/static/jia.png) no-repeat center;background-size: 36upx 36upx;width: 36upx;height: 36upx;display: inline-block;}
+	/* 商家首页 */
+	.uni-nav-bak{background: url(./static/shangchuan.png)  no-repeat;background-size: 100%;}
+	.uni-sao-icon{background: url(./static/sao.png) no-repeat center;background-size: 52upx 48upx;width: 52upx;height: 48upx;display: inline-block;}
+	.uni-jias-icon{background: url(./static/jias.png) no-repeat center;background-size: 48upx 48upx;width: 48upx;height: 48upx;display: inline-block;}
+	.uni-yh-icon{background: url(http://lx97.cn/static/yinhang.png) no-repeat;background-size: 45upx 45upx;width: 45upx;height: 45upx;display: inline-block;}
+	.uni-zh-icon{background: url(http://lx97.cn/static/zxj.png) no-repeat;background-size: 46upx 40upx;width: 46upx;height: 40upx;display: inline-block;}
+	.uni-time-icon{background: url(http://lx97.cn/static/time.png) no-repeat;background-size: 25upx 25upx;width: 25upx;height: 25upx;display: inline-block;}
+	.uni-phones-icon{background: url(http://lx97.cn/static/phones.png) no-repeat;background-size: 18upx 23upx;width: 18upx;height: 23upx;display: inline-block;}
+	.uni-dw-icon{background: url(http://lx97.cn/static/dingwei.png) no-repeat;background-size: 24upx 32upx;width: 24upx;height: 32upx;display: inline-block;}
+	
+	
 
 	

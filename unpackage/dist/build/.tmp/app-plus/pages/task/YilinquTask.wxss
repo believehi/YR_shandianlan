@@ -2,7 +2,18 @@
 view {
 	line-height: 35rpx;
 }
-.uni-img{width: 100rpx;height: 100rpx;}
+.uni-sctp-icon{
+	margin: 15rpx 0;
+}
+.uni-mer-img image{
+	width: 150rpx;
+	height: 250rpx;
+	margin-right: 30rpx;
+}
+.uni-img {
+	width: 200rpx;
+	height: 350rpx;
+}
 .uni-ew-but {
 	width: 239rpx;
 	height: 56rpx;
@@ -11,7 +22,7 @@ view {
 	font-size: 28rpx;
 	line-height: 55rpx;
 	color: #FFFFFF;
-	float: left;
+	text-align: center;
 }
 .content {
 	padding-top: 15rpx;
@@ -114,6 +125,7 @@ view {
 .uni-but-item {
 	position: fixed;
 	bottom: 0;
+	z-index: 999;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;

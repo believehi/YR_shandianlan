@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///E:/公司项目/项目源代码/公司项目/main.js"],"names":["Page","App"],"mappings":";;;;;;;;;;AAAA;AACA;AACI,mJ;AACAA,IAAI,CAAC,+BAAYC,aAAZ,CAAD,CAAJ,C","file":"pages/Merchant/Task.js","sourcesContent":["import 'uni-pages';\nimport pageFactory from 'mpvue-page-factory'\n    import App from './pages/Merchant/Task.vue'\n    Page(pageFactory(App))"],"sourceRoot":""}

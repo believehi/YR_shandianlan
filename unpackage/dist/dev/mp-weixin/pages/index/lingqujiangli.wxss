@@ -12,15 +12,12 @@
 .uni-jl-list .uni-jl-item {
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-align: center;
 	-webkit-align-items: center;
-	    -ms-flex-align: center;
 	        align-items: center;
 	-webkit-box-pack: justify;
 	-webkit-justify-content: space-between;
-	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 	line-height: 90rpx;
 	padding: 0 25rpx;
@@ -42,16 +39,15 @@
 .uni-jl-item .uni-jl {
 	-webkit-box-flex: 2;
 	-webkit-flex-grow: 2;
-	    -ms-flex-positive: 2;
 	        flex-grow: 2;
 }
 .uni-jl-item .uni-jl-sum {
 	font-size: 28rpx;
-	color: #FBB42B;
+	color: #2FB6A7;
 }
 .uni-jl-item button {
 	height: 55rpx;
-	background-color: #FBB42B;
+	background-color: #2FB6A7;
 	border-radius: 28rpx;
 	font-size: 30rpx;
 	color: #FFFFFF;

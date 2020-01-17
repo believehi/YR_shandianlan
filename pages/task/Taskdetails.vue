@@ -37,8 +37,7 @@
 			<view class="uni-rw-ms col">
 				<view class="uni-rw-sm">商家照片：</view>
 				<view class="uni-rw-m">
-					<image :src="rwArray.Pictures" mode=""></image>
-					<image :src="rwArray.Pictures" mode=""></image>
+					<image :src="item" mode=""  v-for="(item,index) in Merimg" :key="index"></image>
 				</view>
 			</view>
 		</view>
@@ -81,7 +80,33 @@
 		data() {
 			return {
 				shows: 0,
-				rwArray: {},
+				rwArray: [
+					{
+						ID:0,
+						TaskName:"小龙坎美团五星好评送五折卷",
+						PeopleMin:1,
+						PeopleMax:2,
+						Days:5,
+						Surplus:21
+					},
+					{
+						ID:1,
+						TaskName:"西贝美团五星好评送五折卷",
+						PeopleMin:1,
+						PeopleMax:2,
+						Days:5,
+						Surplus:21
+					},
+					{
+						ID:2,
+						TaskName:"小龙坎美团五星好评送五折卷",
+						PeopleMin:1,
+						PeopleMax:2,
+						Days:5,
+						Surplus:21
+					}
+					
+				],
 				rwbzArray: {},
 				rwid: '',
 				tisi: '',
@@ -89,71 +114,76 @@
 				TaskId: '',
 				choosedaylist: [],
 				isActive: -1,
-				activedata:''
+				activedata:'',
+				date:'',
+				Merimg:[]
 
 			}
 		},
 		onLoad(e) { //e接收任务的id
-			_self = this;
-			this.rwid = e.rwid;
-			this.rwlist(this.rwid);
-			helper.islogin(true);
+			// _self = this;
+			// this.rwid = e.rwid;
+			// this.rwlist(this.rwid);
+			// helper.islogin(true);
 		},
 		methods: {
 			//渲染任务列表
 			rwlist(id) {
-				uni.showLoading({
-					title: "加载中....",
-					mask: true
-				})
-				uni.request({
-					url: helper.websiteUrl + 'task/gettask',
-					method: "GET",
-					data: helper.postdata({
-						id: id,
-						"userid": helper.getstate().userid,
-					}),
-					success: (res) => {
-						if (res.data.code == 200) {
-							var datetoday = new Date();
-							this.TaskId = res.data.data.baseinfo.TaskId;
-							this.rwArray = res.data.data.baseinfo;
-							this.rwbzArray = res.data.data.baseinfo.Instruction.split(";");
-							var datetest = new Date(res.data.data.baseinfo.EndDate); //获取当前任务的结束时间 
-							var lazyday = parseInt(parseInt(datetest.getTime() - datetoday.getTime()) / (24 * 3600 * 1000)) + 1; //获取剩余天数
-							var maxday = lazyday > 5 ? 5 : lazyday;
-							var week = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
-							for (var i = 0; i < maxday; i++) {
-								var chooseday = new Object();
-								var day = new Date((parseInt(datetoday.getTime()) + (24 * 3600 * 1000) * i));
-								if (i == 0) {
-									chooseday.cndes = "今天";
-									chooseday.monthday = day.getMonth() + 1 + "-" + day.getDate();
-								} else if (datetoday.getDay() + i > 6) {
-									chooseday.cndes = week[datetoday.getDay() + i - 7];
-									chooseday.monthday = day.getMonth() + 1 + "-" + (day.getDate());
-								} else {
-									chooseday.cndes = week[datetoday.getDay() + i];
-									chooseday.monthday = day.getMonth() + 1 + "-" + (day.getDate());
-								}
-								this.choosedaylist.push(chooseday);
-							}
-						} else {
-							helper.goout(res.data.info);
-							uni.showToast({
-								icon: 'none',
-								title: res.data.info
-							});
-						}
-						uni.hideLoading();
-					},
-					fail: (res) => {
-						uni.showToast({
-							icon: 'none',
-							title: '网络异常,请下拉刷新重试！'
-						});
-					}
-				})
+			// 	uni.showLoading({
+			// 		title: "加载中....",
+			// 		mask: true
+			// 	})
+			// 	uni.request({
+			// 		url: helper.websiteUrl + 'task/gettask',
+			// 		method: "GET",
+			// 		data: helper.postdata({
+			// 			id: id,
+			// 			"userid": helper.getstate().userid,
+			// 		}),
+			// 		success: (res) => {
+			// 			if (res.data.code == 200) {
+			// 				var datetoday = new Date();
+			// 				this.TaskId = res.data.data.baseinfo.TaskId;
+			// 				this.rwArray = res.data.data.baseinfo;
+			// 				this.rwbzArray = res.data.data.baseinfo.Instruction.split(";");
+			// 				this.Merimg = res.data.data.baseinfo.Pictures.split(';');	
+			// 				this.date = res.data.data.baseinfo.EndDate;
+			// 				var endtimes = this.date.replace(/\-/g, "/")
+			// 				var datetest = new Date(endtimes); //获取当前任务的结束时间 
+			// 				var lazyday = parseInt(parseInt(datetest.getTime() - datetoday.getTime()) / (24 * 3600 * 1000)) + 1; //获取剩余天数
+			// 				var maxday = lazyday > 5 ? 5 : lazyday;
+			// 				var week = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
+			// 				for (var i = 0; i < maxday; i++) {
+			// 					var chooseday = new Object();
+			// 					var day = new Date((parseInt(datetoday.getTime()) + (24 * 3600 * 1000) * i));
+			// 					if (i == 0) {
+			// 						chooseday.cndes = "今天";
+			// 						chooseday.monthday = day.getMonth() + 1 + "-" + day.getDate();
+			// 					} else if (datetoday.getDay() + i > 6) {
+			// 						chooseday.cndes = week[datetoday.getDay() + i - 7];
+			// 						chooseday.monthday = day.getMonth() + 1 + "-" + (day.getDate());
+			// 					} else {
+			// 						chooseday.cndes = week[datetoday.getDay() + i];
+			// 						chooseday.monthday = day.getMonth() + 1 + "-" + (day.getDate());
+			// 					}
+			// 					this.choosedaylist.push(chooseday);
+			// 				}
+			// 			} else {
+			// 				helper.goout(res.data.info);
+			// 				uni.showToast({
+			// 					icon: 'none',
+			// 					title: res.data.info
+			// 				});
+			// 			}
+			// 			uni.hideLoading();
+			// 		},
+			// 		fail: (res) => {
+			// 			uni.showToast({
+			// 				icon: 'none',
+			// 				title: '网络异常,请下拉刷新重试！'
+			// 			});
+			// 		}
+			// 	})
 			},
 			// 领取按钮
 			lqbut(e) {
@@ -178,8 +208,9 @@
 							"type": "1",
 							"CState": RState > 0 ? "0" : "1"
 						}),
-						success: res => {						
+						success: res => {
 							if (res.data.code == 200) {
+								
 								this.choosedaylist.length = 0;
 								this.rwlist(this.rwid);
 								uni.showToast({
@@ -187,9 +218,11 @@
 								});
 							} else {
 								helper.goout(res.data.info);
-								uni.showToast({
-									icon: 'none',
-									title: "任务已领取"
+								uni.showModal({
+									title: '提示',
+									content:  res.data.info,
+									showCancel: false,
+									confirmText: "关闭",
 								});
 							}
 						},
@@ -202,10 +235,7 @@
 						},
 					});
 				}
-			    
-				
 			},
-
 			//收藏按钮
 			scbut() {
 				this.choosedaylist.length = 0;
@@ -221,7 +251,9 @@
 						"CState": cstate > 0 ? "0" : "1"
 					}),
 					success: res => {
+						
 						if (res.data.code == 200) {
+							
 							this.rwlist(this.rwid);
 							uni.showToast({
 								title: cstatetxt + "成功。"
@@ -273,7 +305,7 @@
 		text-align: center;
 		font-size: 32upx;
 		color: #0b0b0b;
-		line-height: 80upx;
+		padding: 20upx 0;
 		border-bottom: 1upx solid #e6e6e6;
 	}
 

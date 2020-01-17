@@ -7,6 +7,7 @@
 				<uni-icon class="iconfont-1 icon-you"></uni-icon>
 			</view>
 		</view>
+		<text  :class="{tisi:tishi == '未绑定平台'}" >{{tishi}}</text>
 		<view class="uni-item">
 			<view class="uni-item-list uni-tj-but " @click="adddomain">
 				<uni-icon class="uni-Tj-icon"></uni-icon>
@@ -22,6 +23,7 @@
 		data() {
 			return {
 				PlanArray: '',
+				tishi:''
 
 			};
 		},
@@ -49,6 +51,11 @@
 							if (res.data.code == 200) {
 								uni.hideLoading()
 								this.PlanArray = res.data.data.baseinfo
+								if (this.PlanArray=="") {
+									this.tishi = '未绑定平台'
+								} else{
+									this.tishi = ''
+								}
 							} else {
 								helper.goout(res.data.info);
 								uni.showToast({
@@ -75,9 +82,6 @@
 			adddomain() {
 				uni.navigateTo({
 					url: 'AddDomain',
-					success: res => {},
-					fail: () => {},
-					complete: () => {}
 				});
 			}
 		}

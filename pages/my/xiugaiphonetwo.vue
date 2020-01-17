@@ -1,13 +1,13 @@
 <template>
 	<view class="content">
 		<view class="uni-password-but">
-			<form @submit="formSubmit" @reset="formReset">
-				<input type="number" value="" placeholder="请输入新手机号" class="uni-phone" />
+			<form @submit="formSubmit">
+				<input type="number" value="" placeholder="请输入新手机号" v-model="phone" class="uni-phone" />
 				<view class="uni-yzm-but">
 					<input type="number" name='code' v-model="code" placeholder="请输入验证码" />
 					<view class="" @click="openCodeDialog">{{tipsCode}}</view>
 				</view>
-				<button type="primary">保存</button>
+				<button type="primary" formType="submit">保存</button>
 			</form>
 		</view>
 	</view>
@@ -21,6 +21,7 @@
 				phone: '',
 				tipsCode: "获取验证码",
 				code: '',
+				codes:'',
 				codestr: '',
 				timeNum: 60,
 				clikType: false,
@@ -37,6 +38,7 @@
 						title: '请输入你的手机号码'
 					});
 					return;
+					
 				} else if (!helper.checkmobile(that.phone)) {
 					uni.showToast({
 						icon: 'none',
@@ -44,20 +46,21 @@
 					});
 					return;
 				} else if (!that.clikType) {
+					that.getTime();
 					that.codestr = helper.MathRand(4);
 					that.clikType = true;
 					uni.request({
-						url: 'http://utf8.api.smschinese.cn/',
+						url:helper.websiteUrl+'send/sendcode',
 						method: 'GET',
 						data: {
-							Uid: "xingjiushenqi",
-							Key: "d41d8cd98f00b204e980",
-							smsMob: that.phone,
-							smsText: "您的验证码为：" + that.codestr + "，有效期5分钟"
+							loginMark: helper.getloginMark(),
+							token: '',
+							data: '{"phone": "' + that.phone + '"}'
 						},
 						success: res => {
-							if (res.data == "1") {
-								that.getTime()
+							if (res.data.code == 200) {
+								
+								this.codes = res.data.info;
 							} else {
 								uni.showToast({
 									icon: 'none',
@@ -98,7 +101,7 @@
 					});
 					return;
 				}
-				if (this.code == "" || this.code != this.codestr || this.codestr !=
+				if (this.code == "" || this.code != this.codes || this.codes !=
 					this.code) {
 					uni.showToast({
 						icon: 'none',
@@ -119,8 +122,10 @@
 						if (res.data.code == 200) {
 							uni.showToast({
 								icon: 'none',
-								title: res.data.info
+								title: '修改成功,请重新登录。',
+								duration:3000,
 							});
+							helper.logout();
 						} else {
 							uni.showToast({
 								icon: 'none',

@@ -3,8 +3,8 @@
 		<!-- 用户可提现的金额 -->
 		<view class="uni-tx-sum">
 			<text>可提现金额：</text>
-			<text class="tx-sum">{{userfoArray.suncoin}}太阳币</text>
-			<text class="uni-tx-gz">1太阳币=1元</text>
+			<text class="tx-sum">{{userfoArray.suncoin}}闪电币</text>
+			<text class="uni-tx-gz">100闪电币=1元</text>
 		</view>
 		<!-- 用户账户信息 -->
 		<!-- 		<view class="uni-user-content">

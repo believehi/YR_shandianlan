@@ -10,10 +10,10 @@
 						<!-- 用户昵称 -->
 						<text class="uni-user-name">{{baseinfoArray.nikename}}</text>
 					</view>
-					<!-- 用户太阳币数量 -->
+					<!-- 用户闪电币数量 -->
 					<view class="col uni-Taiyanbi">
 						<view class="Qian_icon"></view>
-						<text>{{baseinfoArray.suncoin}}</text>
+						<text>{{baseinfoArray.suncoin}}喵币</text>
 					</view>
 					<!-- 用户收益 -->
 					<view class="uni-shouyi col">
@@ -40,13 +40,13 @@
 				<view class="uni-rw uni-but" @click="openmytask">
 					<uni-icon class="uni-rw-but"></uni-icon>
 					<view>
-						<text>我的任务</text>
+						<text>我的活动</text>
 					</view>
 				</view>
 				<view class="uni-bw uni-but" @click="openbawangcan">
 					<uni-icon class="uni-bw-but"></uni-icon>
 					<view>
-						<text>霸王餐</text>
+						<text>活动列表</text>
 					</view>
 				</view>
 				<view class="uni-lq uni-but" @click="openJianli">
@@ -65,9 +65,9 @@
 				<view class="uni-rw-text">
 					<text class="Text_Nowrap">{{item.TaskName}}</text>
 					<view class="uni-rw-sl">
-						<view>{{item.PeopleMin}}-{{item.PeopleMax}}人</view>
+						<view>{{item.Type == 0 ? item.Merbercoin : '0' }}元</view>
 						<view>{{item.Days}}内</view>
-						<view>还剩<text class="uni-sy">{{item.Surplus}}</text>份</view>
+						<view>还剩{{item.Surplus}}份</view>
 					</view>
 				</view>
 				<button type="primary" :id="item.IsGet" @click="openid" :class="{butactive:item.IsGet > 0 }">{{ item.IsGet > 0 ? '已领取' : '领取' }}</button>
@@ -109,12 +109,9 @@
 						userid: userId,
 						page: 1,
 						num: 10,
-						category: '',
-						istop: 1
 					}),
 					success: (res) => {
 						if (res.data.code == 200) {
-							
 							this.baseinfoArray = res.data.data.baseinfo;
 							this.renwuArray = res.data.data.tasklist;
 						} else {
@@ -124,7 +121,6 @@
 								title: res.data.info
 							});
 						}
-
 						if (res.data.data.tasklist.IsGet > 0) { //该任务用户是否已经领取过
 							this.IsGet = '已领取'
 						} else {
@@ -147,35 +143,30 @@
 				});
 			},
 			openTixian() { //打开提现页面
-				uni.navigateTo({
-					url: '../Tixian/tixianindex',
-					success: res => {},
-					fail: () => {},
-					complete: () => {}
+				uni.showToast({
+					icon: 'none',
+					title: '该功能暂未开通！'
 				});
+				// 				uni.navigateTo({
+				// 					url: '../Tixian/tixianindex',
+				// 					success: res => {},
+				// 					fail: () => {},
+				// 					complete: () => {}
+				// 				});
 			},
 			openJianli() { //打开领取奖励页面
 				uni.navigateTo({
 					url: 'lingqujiangli',
-					success: res => {},
-					fail: () => {},
-					complete: () => {}
 				});
 			},
 			openbawangcan() { //打开霸王餐页面
 				uni.navigateTo({
 					url: 'bawangcan',
-					success: res => {},
-					fail: () => {},
-					complete: () => {}
 				});
 			},
 			openmytask() { //打开我的任务页面
 				uni.navigateTo({
 					url: '../task/mytask',
-					success: res => {},
-					fail: () => {},
-					complete: () => {}
 				});
 			},
 			openinfo(e) {
@@ -187,9 +178,15 @@
 	}
 </script>
 <style>
+	.uni-rw-text .Text_Nowrap {
+		width: 425upx;
+		display: inline-block;
+		align-items: flex-end;
+	}
+
 	/* 用户信息 */
 	.uni-card-header {
-		background: #f4c336;
+		background-color: #2FB6A7;
 		height: 130upx;
 		width: 100%;
 		display: flex;
@@ -222,7 +219,7 @@
 
 	.uni-Taiyanbi text {
 		font-size: 45upx;
-		color: #fb8d44;
+		color: #2FB6A7;
 		margin-left: 20upx;
 	}
 
@@ -244,7 +241,7 @@
 		border-radius: 25upx;
 		font-size: 28upx;
 		line-height: 52upx;
-		background-color: #fb8d44;
+		background-color: #2FB6A7;
 		border: none;
 		font-family: SourceHanSansSC-Regular;
 		width: 115upx;
@@ -259,7 +256,7 @@
 		color: #b6b6b6;
 	}
 
-	.uni-rw-sl vie .uni-fgx:after {
+	.uni-rw-sl view .uni-fgx:after {
 		content: "";
 		width: 1upx;
 		height: 16upx;

@@ -9,7 +9,7 @@
 						<view class="uni-rw-sl">
 							<view>{{item.PeopleMin}}-{{item.PeopleMax}}人</view>
 							<view>{{item.Days}}天内</view>
-							<view>还剩<text>{{item.Surplus}}</text>份</view>
+							<view>还剩<text class="uni-sy">{{item.Surplus}}</text>份</view>
 						</view>
 					</view>
 					<view class="uni-rw-time">

@@ -37,8 +37,7 @@
 			<view class="uni-rw-ms col">
 				<view class="uni-rw-sm">商家照片：</view>
 				<view class="uni-rw-m">
-					<image :src="rwArray.Pictures" mode=""></image>
-					<image :src="rwArray.Pictures" mode=""></image>
+					<image :src="item" mode="" v-for="(item,index) in Merimg" :key="index"></image>
 				</view>
 			</view>
 		</view>
@@ -60,17 +59,36 @@
 			<view class="uni-cz-bz">
 				<view class="uni-cz-item">
 					<text>{{rwbzArray[0]}}</text>
-					<!-- 获取二维码 -->
-					<button type="primary" class="uni-ew-but">点击获取二维码</button>
-				</view>
-				<view class="uni-cz-item">
 					<text>{{rwbzArray[1]}}</text>
+					<text>{{rwbzArray[2]}}</text>
+				</view>
+			</view>
+		</view>
+		<view class="uni-rw-time">
+			<view class="uni-cz-item">
+				<view class="uni-rw-ms col uni-sj-wz">
+					<view class="uni-rw-sm">核销二维码</view>
+				</view>
+				<!-- 获取二维码 -->
+				<view class="" style="padding: 20upx 50upx;">
+					<cover-view>
+						<canvas canvas-id="myQrcode"></canvas>
+					</cover-view>
+				</view>
+			</view>
+		</view>
+		<view class="uni-rw-time">
+			<view class="uni-cz-item">
+				<view class="uni-rw-ms col uni-sj-wz">
+					<view class="uni-rw-sm">上传截图</view>
+				</view>
+				<view class="uni-cz-item" style="display: flex;justify-content:space-between;padding: 20upx 0;">
 					<!-- 上传图片按钮 -->
 					<view class="uni-sctp-icon" @click="scbut"></view>
-					<image :src="img" class="uni-img"></image>
-				</view>
-				<view class="uni-cz-item">
-					<text>{{rwbzArray[2]}}</text>
+					<view class="uni-mer-img">
+						<image :src="item" v-for="(item,index) in merimg" :key="index" @click="openMerimg"></image>
+					</view>
+
 				</view>
 			</view>
 		</view>
@@ -87,6 +105,7 @@
 
 <script>
 	import helper from '../../common/helper.js';
+	import drawQrcode from '../../common/weapp-qrcode.js';
 	var _self;
 	export default {
 
@@ -99,17 +118,35 @@
 				TaskId: "",
 				lqid: '',
 				imageSrc: '',
-				img: ''
+				img: '',
+				date: '',
+				Merimg: [],
+				merimg: [],
+				index: '',
+				pictures: ''
 			}
 		},
 		onLoad(e) { //e接收任务的id
-			_self = this;
-			this.lqrwlist(e);
-			this.lqid = e.lqid;
+			// _self = this;
+			// this.lqrwlist(e);
+			// this.lqid = e.lqid;
+			// this.qrcode()
+
 		},
 		methods: {
+			// 生成二维码
+			qrcode() {
+				drawQrcode({
+					width: 150,
+					height: 150,
+					canvasId: 'myQrcode',
+					text: this.lqid
+				})
+				this.index = '0'
+			},
 			// 领取任务列表
 			lqrwlist(e) {
+				var endtime = this.data;
 				helper.islogin(true);
 				uni.showLoading({
 					title: "加载中....",
@@ -125,13 +162,18 @@
 					success: (res) => {
 						if (res.data.code == 200) {
 							this.TaskId = res.data.data.baseinfo.TaskId;
-							var datetest = new Date(res.data.data.baseinfo.Receivedate); //获取当前任务的结束时间 
+							this.date = res.data.data.baseinfo.Receivedate;
+							this.Merimg = res.data.data.baseinfo.Pictures.split(';')
+							var endtimes = this.date.replace(/\-/g, "/")
+							var datetest = new Date(endtimes); //获取当前任务的结束时间 
+							var Month = datetest.getMonth() + 1;
 							var lazyday = parseInt(parseInt(datetest.getTime() - new Date().getTime()) / (24 * 3600 * 1000)) + 1; //获取剩余天数
-							res.data.data.baseinfo.Receivedate = datetest.getFullYear() + "年" + datetest.getMonth() + 1 + "月" + datetest.getDate() +
+							res.data.data.baseinfo.Receivedate = datetest.getFullYear() + "年" + Month + "月" +
+								datetest.getDate() +
 								"日"; //格式化任务结束时间
 							if (lazyday > 0) //判断任务时间是否到期 显示不同的内容
 							{
-								this.dateDes = lazyday + "天内，即可免费享用霸王餐";
+								this.dateDes = lazyday + "天后，即可免费享用霸王餐";
 							} else {
 								this.dateDes = "该活动已经结束！";
 							}
@@ -154,6 +196,12 @@
 						});
 					}
 				})
+			},
+			// 查看缩略图
+			openMerimg() {
+				uni.previewImage({
+					urls: this.merimg
+				});
 			},
 			// 放弃任务
 			fanqibut() {
@@ -197,44 +245,80 @@
 					that.$set(that.$data, key, obj[key])
 				});
 			},
-			// 上传图片
-			scbut: function() {
+			scbut() {
 				var _this = this
-				uni.chooseImage({
-					count: 2, //上传图片的张数
-					sizeType: ['compressed'],
-					sourceType: ['album'],
-					success: function(res) {
-						uni.uploadFile({
-							url: helper.websiteUrl + '/annexes/UploadImg', //仅为示例，非真实的接口地址
-							filePath: res.tempFilePaths[0],
-							fileType: "uploadFile",
-							name: 'upload',
-							formData: helper.postdata({
-								"folderId": "123465",
-							}),
-							success: function(res) {
-								var arr = JSON.parse(res.data)
-								var arrs = arr.info
-								var url = 'https://cszx.yiruit.net'
-								var imgurl = url + arrs
-								_this.img = imgurl
-							}
-						})
-						_this.setData({
-							img: res.tempFilePaths[0],
-						})
-					},
-				})
+				if (_this.merimg.length >= "2") {
+					uni.showToast({
+						icon: 'none',
+						title: '截图最多上传两张',
+					});
+				} else {
+					uni.chooseImage({
+						count: 1,
+						sizeType: ['original', 'compressed'],
+						sourceType: ['album'],
+						success: function(res) {
+							uni.showLoading({
+								title: '上传中'
+							});
+							uni.uploadFile({
+								url: helper.websiteUrl + '/annexes/UploadImg',
+								filePath: res.tempFilePaths[0],
+								fileType: "uploadFile",
+								name: 'upload',
+								formData: helper.postdata({
+									"folderId": "123465",
+								}),
+								success: function(resup) {
+									var resdata = JSON.parse(resup.data);
+									if (resdata.code == 200) {
+										var url = 'https://cszx.yiruit.net';
+										var imgurl = url + resdata.info;
+										_this.img = imgurl;
+										uni.showToast({
+											icon: 'none',
+											title: '上传成功！'
+										});
+									} else {
+										uni.hideLoading();
+										uni.showToast({
+											icon: 'none',
+											title: resdata.info
+										});
+									}
+									uni.hideLoading();
+									_this.merimg.push(_this.img);
+								},
+								fail() {
+									uni.hideLoading();
+									uni.showToast({
+										icon: 'none',
+										title: '识别失败'
+									});
+								}
+							});
+							_this.setData({
+								img: res.tempFilePaths[0],
+							});
+						},
+					})
+				}
+
 			},
 			// 任务提交按钮
 			tjbut() {
-				if (_self.img == '') {
+				if (_self.dateDes == "该活动已经结束！") {
+					uni.showToast({
+						icon: 'none',
+						title: "该活动已结束！"
+					})
+				} else if (_self.merimg == '') {
 					uni.showToast({
 						icon: 'none',
 						title: "请上传截图！"
 					})
 				} else {
+					_self.pictures = _self.merimg.join(';');
 					uni.showLoading({
 						title: "任务提交中...",
 					})
@@ -243,27 +327,33 @@
 						method: 'GET',
 						data: helper.postdata({
 							"id": _self.lqid,
-							"pics": _self.img,
+							"pics": _self.pictures,
 							"userid": helper.getstate().userid,
 							"type": 1,
 							"taskid": _self.TaskId,
 						}),
 						success: res => {
-							console.log(res)
+							uni.hideLoading()
 							if (res.data.code == 200) {
-								uni.hideLoading()
 								uni.navigateBack({
 									delta: 1
 								});
 							} else {
-								uni.showToast({
-									icon: 'none',
-									title: res.data.info
+
+								uni.showModal({
+									title: '提示',
+									content: res.data.info,
+									showCancel: false,
+									confirmText: "关闭",
 								});
 							}
 						},
-						fail: () => {},
-						complete: () => {}
+						fail: () => {
+							uni.showToast({
+								icon: 'none',
+								title: '网络异常,请稍后重试'
+							});
+						}
 					});
 				}
 			}
@@ -272,8 +362,19 @@
 </script>
 
 <style>
+
 	view {
 		line-height: 35upx;
+	}
+
+	.uni-sctp-icon {
+		margin: 15upx 0;
+	}
+
+	.uni-mer-img image {
+		width: 150upx;
+		height: 250upx;
+		margin-right: 30upx;
 	}
 
 	.uni-img {
@@ -289,7 +390,7 @@
 		font-size: 28upx;
 		line-height: 55upx;
 		color: #FFFFFF;
-		float: left;
+		text-align: center;
 	}
 
 	.content {
@@ -313,7 +414,7 @@
 		text-align: center;
 		font-size: 32upx;
 		color: #0b0b0b;
-		line-height: 80upx;
+		padding: 20upx 0;
 		border-bottom: 1upx solid #e6e6e6;
 	}
 
@@ -401,6 +502,7 @@
 	.uni-but-item {
 		position: fixed;
 		bottom: 0;
+		z-index: 9999999;
 		display: flex;
 	}
 

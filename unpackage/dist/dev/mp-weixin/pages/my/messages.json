@@ -1,5 +1,5 @@
 {
-  "usingComponents": {},
   "navigationBarTitleText": "系统消息",
-  "navigationBarBackgroundColor": "#FFFFFF"
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "usingComponents": {}
 }

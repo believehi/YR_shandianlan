@@ -16,13 +16,12 @@ view {
 	text-align: center;
 	font-size: 32rpx;
 	color: #0b0b0b;
-	line-height: 80rpx;
+	padding: 20rpx 0;
 	border-bottom: 1rpx solid #e6e6e6;
 }
 .uni-rw-ms {
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 	font-size: 30rpx;
 	padding: 25rpx 0;
@@ -34,7 +33,6 @@ view {
 .uni-rw-ms .uni-rw-m {
 	-webkit-box-flex: 2;
 	-webkit-flex-grow: 2;
-	    -ms-flex-positive: 2;
 	        flex-grow: 2;
 	width: 565rpx;
 	text-align: justify;
@@ -69,11 +67,9 @@ view {
 .uni-time-list {
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-pack: justify;
 	-webkit-justify-content: space-between;
-	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 }
 .uni-time-item {
@@ -99,7 +95,6 @@ view {
 	bottom: 0;
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 }
 .uni-but-item view {

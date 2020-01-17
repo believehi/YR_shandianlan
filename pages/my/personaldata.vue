@@ -7,7 +7,7 @@
 					<text>头像</text>
 					<input type="text" name='id' :value="UserId" style="display: none;" />
 					<input type="text" name='img' :value="img" style="display: none;" />
-					<input type="" value="" />
+
 					<view>
 						<image :src="img"></image>
 					</view>
@@ -17,7 +17,7 @@
 				<view class="uni-input-item uni-data-item">
 					<text>昵称</text>
 					<view>
-						<input type="text" name='Nickname' v-model="nickname" :value="userfoArray.Nickname" />
+						<input type="text" name='Nickname' v-model="nickname"  />
 					</view>
 					<uni-icon class="iconfont-1 icon-you"></uni-icon>
 				</view>
@@ -39,12 +39,12 @@
 					</view>
 					<uni-icon class="iconfont-1 icon-you"></uni-icon>
 				</view>
-
 				<!-- 手机号码 -->
 				<view class="uni-input-item uni-data-item">
 					<text>手机号码</text>
 					<view>
-						<input class="uni-phone-color" type="number" name="Phone" v-model="mobile" :value="userfoArray.Phone" placeholder="请填写手机号码"
+						<input class="uni-phone-color" type="number" name="Phone" v-model="mobile" 
+						 placeholder="请填写手机号码"
 						 @click="openphone" disabled="disabled" />
 					</view>
 					<uni-icon class="iconfont-1 icon-you"></uni-icon>
@@ -73,9 +73,11 @@
 					</view>
 					<uni-icon class="iconfont-1 icon-you"></uni-icon>
 				</view>
-
 			</view>
+			<view class="uni-bc-but" style="margin:20upx auto;line-height: 90upx;" @click="openlingyu">绑定平台</view>
+
 			<button type="" formType="submit" class="uni-bc-but">保存</button>
+
 			<!-- 			<button type="" class="uni-bc-but" @click="amendbut">保存</button> -->
 		</form>
 	</view>
@@ -107,45 +109,55 @@
 			this.token = uni.getStorageSync('token')
 		},
 		methods: {
+			// 打开擅长领域
+			openlingyu() {
+				uni.navigateTo({
+					url: 'Domain',
+				});
+			},
+
 			// 修改个人信息表单提交
 			formSubmit: function(e) {
-				this.userdata = e.detail.value
+				this.userdata = e.detail.value;
 				var _this = this
-				uni.request({
-					url: helper.websiteUrl + '/usercenter/UpdateUserCenter',
-					method: 'GET',
-					data: {
-						"loginMark": _this.loginMark,
-						"token": _this.token,
-						"data": _this.userdata
-					},
-					success: res => {
-						var a = {
-							"loginMark": _this.loginMark,
-							"token": _this.token,
-							"data": _this.userdata
-						}
-					   console.log(a)
-						if (res.data.code == 200) {
-							uni.showToast({
-								icon: 'none',
-								title: '修改成功'
-							});
-						} else {
-							uni.showToast({
-								icon: 'none',
-								title: res.data.info
-							});
-						}
-					},
-					fail: () => {
-						uni.showToast({
-							icon: 'none',
-							title: '网络异常,请稍后重试'
-						});
-					}
+				uni.showModal({
+					title: '提示',
+					content: '是否确定修改。',
+					success: function(res) {
+						if (res.confirm) {
+							uni.request({
+								url: helper.websiteUrl + '/usercenter/UpdateUserCenter',
+								method: 'GET',
+								data: {
+									"loginMark": helper.getloginMark(),
+									"token": _this.token,
+									"data": _this.userdata
+								},
+								success: res => {
+									if (res.data.code == 200) {
+										uni.showToast({
+											icon: 'none',
+											title: '修改成功'
+										});
+									} else {
+										uni.showToast({
+											icon: 'none',
+											title: res.data.info
+										});
+									}
+								},
+								fail: () => {
+									uni.showToast({
+										icon: 'none',
+										title: '网络异常,请稍后重试'
+									});
+								}
 
+							});
+						}
+					}
 				});
+
 			},
 			// 性别选择
 			bindPickerChange: function(e) {
@@ -294,8 +306,9 @@
 		letter-spacing: 3upx;
 		color: #FFFFFF;
 		border: none;
-		margin-top: 110upx;
+		margin-top: 50upx;
 		width: 700upx;
 		height: 90upx;
+		text-align: center;
 	}
 </style>

@@ -6,6 +6,26 @@
 				<text :id="item.ID" @click="open" :class="{active:item.ID == isActive}">{{item.Name}}</text>
 			</view>
 		</view>
+		<!-- 平台说明 -->
+		<view class="uni-rw-list">
+			<view class="uni-rw-cont h">
+				<view class="platform-box">
+					<view class="platform">
+						<text>平台 :</text>
+						<text>全部</text>
+						<text>大众点评</text>
+						<text>微信</text>
+					</view>
+					<view class="platform-type">
+						<text>类型 :</text>
+						<text>人气测评</text>
+						<text>店铺收藏</text>
+						<text>点赞</text>
+					</view>
+				</view>
+			</view>
+		</view>
+
 		<!-- 任务领取 -->
 		<view class="uni-rw-list" v-for="(item,index) in rwlistArray" :key="index">
 			<view class="uni-rw-cont" @tap="openrwid" :data-rwid="item.ID">
@@ -28,13 +48,54 @@
 </template>
 
 <script>
-	import helper from '../../common/helper.js';
+	//import helper from '../../common/helper.js';
 	export default {
 		data() {
 			return {
-				fenleiArray: {}, //分类列表菜单
+				fenleiArray: [{
+						ID: 0,
+						Name: "待领取"
+					},
+					{
+						ID: 1,
+						Name: "已领取"
+					},
+					{
+						ID: 2,
+						Name: "待审核"
+					},
+					{
+						ID: 3,
+						Name: "已完成"
+					},
+				], //分类列表菜单
 				isActive: "1", //分类列表初始选中状态
-				rwlistArray: "", //任务列表数据
+				rwlistArray: [{
+						ID: 0,
+						TaskName: "小龙坎美团五星好评送五折卷",
+						PeopleMin: 1,
+						PeopleMax: 2,
+						Days: 5,
+						Surplus: 21
+					},
+					{
+						ID: 1,
+						TaskName: "西贝美团五星好评送五折卷",
+						PeopleMin: 1,
+						PeopleMax: 2,
+						Days: 5,
+						Surplus: 21
+					},
+					{
+						ID: 2,
+						TaskName: "小龙坎美团五星好评送五折卷",
+						PeopleMin: 1,
+						PeopleMax: 2,
+						Days: 5,
+						Surplus: 21
+					}
+
+				], //任务列表数据
 				Tishi: '',
 				num: '9', //默认显示9条任务数据
 				bottomtisi: ''
@@ -44,14 +105,14 @@
 
 		},
 		onLoad() {
-			this.fenleilist()
-			this.rwdata();
+			// this.fenleilist()
+			// this.rwdata();
 		},
 		onShow() {
-			this.fenleilist();
+			// this.fenleilist();
 		},
 		onPullDownRefresh: function() { //下拉刷新
-			this.fenleilist(true);
+			// this.fenleilist(true);
 		},
 		//触底事件
 		onReachBottom() {
@@ -61,46 +122,48 @@
 		},
 		methods: {
 			open(e) { //分类列表点击获取任务分类id
+				console.log(e)
 				this.isActive = e.currentTarget.id;
-				this.fenleilist(e)
+				// this.fenleilist(e)
 			},
 			// 获取任务的id
 			openrwid(e) {
-				uni.navigateTo({
-					url: '../task/Taskdetails?rwid=' + e.currentTarget.dataset.rwid,
-				});
+
+				// uni.navigateTo({
+				// 	url: '../task/Taskdetails?rwid=' + e.currentTarget.dataset.rwid,
+				// });
 			},
 			// 请求任务分类
-			rwdata(isdown) {
-				uni.request({
-					url: helper.websiteUrl + 'task/getcategory',
-					method: 'GET',
-					data: helper.postdata({}),
-					success: (res) => {
-						if (res.data.code == 200) {
-							uni.stopPullDownRefresh(); //刷新停止
-							this.fenleiArray = res.data.data.baseinfo;
-							this.fenleiID = this.fenleiArray.ID
-						} else {
-							helper.goout(res.data.info);
-							uni.showToast({
-								icon: 'none',
-								title: res.data.info
-							});
-						}
-						uni.hideLoading();
-					},
-					fail: () => {
-						uni.hideLoading();
-						uni.showToast({
-							icon: 'none',
-							title: '网络异常,请下拉刷新重试！'
-						});
-					},
-				});
-			},
+			// rwdata(isdown) {
+			// 	uni.request({
+			// 		url: helper.websiteUrl + 'task/getcategory',
+			// 		method: 'GET',
+			// 		data: helper.postdata({}),
+			// 		success: (res) => {
+			// 			if (res.data.code == 200) {
+			// 				uni.stopPullDownRefresh(); //刷新停止
+			// 				this.fenleiArray = res.data.data.baseinfo;
+			// 				this.fenleiID = this.fenleiArray.ID
+			// 			} else {
+			// 				helper.goout(res.data.info);
+			// 				uni.showToast({
+			// 					icon: 'none',
+			// 					title: res.data.info
+			// 				});
+			// 			}
+			// 			uni.hideLoading();
+			// 		},
+			// 		fail: () => {
+			// 			uni.hideLoading();
+			// 			uni.showToast({
+			// 				icon: 'none',
+			// 				title: '网络异常,请下拉刷新重试！'
+			// 			});
+			// 		},
+			// 	});
+			// },
 			fenleilist(e, isdown) {
-				helper.islogin(true);
+				// helper.islogin(true);
 				uni.showLoading({
 					title: "加载中.....",
 					mask: true
@@ -169,12 +232,29 @@
 	}
 
 	.active {
-		color: #ffca2f !important;
+		color: #2FB6A7 !important;
 	}
 
 	/* 内容背景色 */
 	.content {
 		background: #f5f5f5;
+	}
+	.platform-box{
+	height: 120upx;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	}
+	.platform-box text{
+		font-size: 36upx;
+		margin-left: 35upx;
+	}
+	.h{
+		height: 160upx;
+		margin-top: 25upx!important;
+	}
+	.platform-box text:nth-child(1){
+		margin-left: 0;
 	}
 
 	/* 选项卡样式 */

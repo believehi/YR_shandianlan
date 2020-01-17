@@ -31,11 +31,9 @@
 .uni-reg-content {
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-pack: center;
 	-webkit-justify-content: center;
-	    -ms-flex-pack: center;
 	        justify-content: center;
 }
 .uni-reg-list {
@@ -50,15 +48,15 @@
 	top: -20rpx;
 	right: 0;
 	height: 60rpx;
-	background-color: #ffca30;
+	background-color:  #2FB6A7;
 	border-radius: 30rpx;
 	font-size: 28rpx;
 	border: solid 1rpx #dbdbdc;
-	color: #3c3c3c;
+	color: #FFFFFF;
 	text-align: center;
 	line-height: 60rpx;
 	z-index: 999;
-		padding: 0 20rpx;
+	padding: 0 20rpx;
 }
 .uni-reg-list .uni-form-item input {
 	width: 610rpx;
@@ -69,11 +67,9 @@
 .uni-menu-box {
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-pack: justify;
 	-webkit-justify-content: space-between;
-	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 	padding-top: 40rpx;
 }
@@ -84,7 +80,6 @@
 .uni-menu-mt {
 	-webkit-box-align: center;
 	-webkit-align-items: center;
-	    -ms-flex-align: center;
 	        align-items: center;
 }
 .uni-menu-mt text {
@@ -103,12 +98,12 @@
 }
 .uni-zc-but button {
 	height: 76rpx;
-	background-color: #ffca2f;
+	background-color: #2FB6A7;
 	border-radius: 38rpx;
 	line-height: 76rpx;
 	letter-spacing: 2rpx;
 	font-size: 34rpx;
-	margin: 225rpx 0 33rpx 0;
+	margin: 150rpx 0 33rpx 0;
 }
 .button-hover {
 	background-color: rgba(0, 0, 0, 0.1);

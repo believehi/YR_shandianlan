@@ -130,7 +130,7 @@
 		text-align: center;
 		font-size: 32upx;
 		color: #0b0b0b;
-		line-height: 80upx;
+		padding: 20upx 0;
 		border-bottom: 1upx solid #e6e6e6;
 	}
 

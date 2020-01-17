@@ -13,6 +13,7 @@
 				<text class="uni-tx-lj">{{item.Remark}}</text>
 				<text class="uni-tx-zt">审核中</text>
 			</view>
+			<text  :class="{tisi:tishi == '暂无提现记录'}" >{{tishi}}</text>
 		</view>
 	</view>
 </template>
@@ -24,6 +25,7 @@
 			return {
 				userfoArray:'',
 				num: '13',        //默认显示9条任务数据
+				tishi:''
 			};
 		},
 		onLoad() {
@@ -57,8 +59,18 @@
 							uni.hideLoading();
 							uni.stopPullDownRefresh(); //刷新停止
 							this.userfoArray = res.data.data.baseinfo;
-							console.log(res)
+							if (this.userfoArray=="") {
+								this.tishi = '暂无提现记录'
+							} else{
+								this.tishi = ''
+							}
+						}else{
+							uni.showToast({
+								icon: 'none',
+								title: '网络异常,请下拉刷新重试！'
+							});
 						}
+						uni.hideLoading();
 					},
 					fail: () => {
 						uni.hideLoading();
@@ -76,13 +88,16 @@
 
 <style>
 	.content{height: 1200upx;}
+	.tisi{
+		padding: 80upx 0 !important;
+	}
 	.uni-tx-title{font-size: 32upx;color: #606060;width: 656upx;margin: 0 auto;padding: 20upx 0;}
 	.uni-tx-title text:first-child{width: 20%;}
 	.uni-tx-title text:nth-child(2){width: 40%;}
 	.uni-tx-title text:nth-child(3){width: 20%;}
 	.uni-tx-title text:nth-child(4){width: 20%;}
 	.uni-tx-title text{text-align: center;display: inline-block;}
-	.uni-tx-content{width: 656upx;min-height: 1000upx;background: #FFFFFF;border-radius: 20upx;margin: 0 auto;padding: 0 22upx;}
+	.uni-tx-content{width: 656upx;background: #FFFFFF;border-radius: 20upx;margin: 0 auto;padding: 0 22upx;}
 	.uni-tx-item{display: flex;justify-content: center;border-bottom: 1upx solid #e6e6e6;align-items: flex-end;font-size: 30upx;padding: 20upx 0;display:flex;justify-content: space-between;text-align: center;align-items: center;}
 	.uni-tx-item:last-child{border-bottom: none;}
 	.uni-tx-sum{width: 20%;}

@@ -8,7 +8,9 @@
     "app-plus" : {
         /* 5+App特有相关 */
         "modules" : {
-            "VideoPlayer" : {}
+            "VideoPlayer" : {},
+            "OAuth" : {},
+            "Maps" : {}
         },
         /* 模块配置 */
         "distribute" : {
@@ -28,6 +30,8 @@
                     "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
                     "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
                     "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.INTERNET\"/>",
+                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
                     "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
                     "<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
                     "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
@@ -36,13 +40,20 @@
                     "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
                     "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
                     "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
                     "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
                 ]
             },
             "ios" : {},
             /* ios打包配置 */
             "sdkConfigs" : {
-                "oauth" : {}
+                "oauth" : {
+                    "weixin" : {
+                        "appid" : "wx73443228192308d5",
+                        "appsecret" : "d1c0b747fb9e097c45d4b934b753a713"
+                    }
+                },
+                "maps" : {}
             },
             "icons" : {
                 "ios" : {
@@ -82,12 +93,26 @@
     },
     /* SDK配置 */
     "quickapp" : {},
+    //app.js新增如下代码
     /* 快应用特有相关 */
     "mp-weixin" : {
         /* 小程序特有相关 */
-        "appid" : "wxf3faac5f46f05b2e",
+        "appid" : "wxcecbeecaac64d025",
         "setting" : {
             "urlCheck" : false
-        }
+        },
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : "申请"
+            }
+        },
+				"plugins": {
+					"tencentvideo": {
+						"version": "1.2.4",
+						"provider": "wxa75efa648b60994b"
+					}
+				}
     }
 }
+/* 快应用特有相关 *//* 小程序特有相关 */
+

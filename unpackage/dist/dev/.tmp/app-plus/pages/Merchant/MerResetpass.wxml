@@ -1,0 +1,2 @@
+<import src="./MerResetpass.vue.wxml" />
+    <template is="78c7b777" data="{{ ...$root['0'], $root }}"/>

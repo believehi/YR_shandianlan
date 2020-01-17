@@ -1,14 +1,14 @@
 <template>
 	<view class="content">
 		<view class="uni-password-but">
-	    <form @submit="formSubmit">
-			<input type="number" name='phone' v-model="phone" placeholder="请输入已绑定的手机号" class="uni-phone" />
-			<view class="uni-yzm-but">
-				<input type="number" name='code' v-model="code" placeholder="请输入验证码" />
-				<view class="" @click="openCodeDialog">{{tipsCode}}</view>
-			</view>	
-			<button type="primary" formType="submit">下一步</button>
-		</form>
+			<form @submit="formSubmit">
+				<input type="number" name='phone' v-model="phone" placeholder="请输入已绑定的手机号" class="uni-phone" />
+				<view class="uni-yzm-but">
+					<input type="number" name='code' v-model="code" placeholder="请输入验证码" />
+					<view class="" @click="openCodeDialog">{{tipsCode}}</view>
+				</view>
+				<button type="primary" formType="submit">下一步</button>
+			</form>
 		</view>
 	</view>
 </template>
@@ -21,13 +21,14 @@
 				phone: '',
 				tipsCode: "获取验证码",
 				code: '',
+				codes: '',
 				codestr: '',
 				timeNum: 60,
 				clikType: false,
-				timeOut: 60,				
+				timeOut: 60,
 			};
 		},
-		methods:{
+		methods: {
 			// 获取验证码
 			openCodeDialog: function() {
 				var that = this
@@ -44,20 +45,20 @@
 					});
 					return;
 				} else if (!that.clikType) {
+					that.getTime();
 					that.codestr = helper.MathRand(4);
 					that.clikType = true;
 					uni.request({
-						url: 'http://utf8.api.smschinese.cn/',
+						url:helper.websiteUrl+'send/sendcode',
 						method: 'GET',
 						data: {
-							Uid: "xingjiushenqi",
-							Key: "d41d8cd98f00b204e980",
-							smsMob: that.phone,
-							smsText: "您的验证码为：" + that.codestr + "，有效期5分钟"
+							loginMark: helper.getloginMark(),
+							token: '',
+							data: '{"phone": "' + that.phone + '"}'
 						},
 						success: res => {
-							if (res.data == "1") {
-								that.getTime()
+							if (res.data.code == 200) {
+								this.codes = res.data.info;
 							} else {
 								uni.showToast({
 									icon: 'none',
@@ -98,7 +99,7 @@
 					});
 					return;
 				}
-				if (this.code == "" || this.code != this.codestr || this.codestr !=
+				if (this.code == "" || this.code != this.codes || this.codes !=
 					this.code) {
 					uni.showToast({
 						icon: 'none',
@@ -108,20 +109,25 @@
 				}
 				this.userdata = e.detail.value
 				uni.request({
-					url:helper.websiteUrl+'usercenter/checkphone' ,
-					method: 'GET',
-					data:helper.postdata({
-						"type":'2',
-						"phone": this.userdata.phone,
-						"code": this.userdata.code,
-					}),
+						url: helper.websiteUrl + 'usercenter/checkphone',
+						method: 'GET',
+						data: {
+							loginMark: helper.getloginMark(),
+							token: '',
+							data:{
+							"type": '2',
+							"phone": this.userdata.phone,
+							"code": this.userdata.code,
+						}
+						
+					},
 					success: res => {
 						if (res.data.code == 200) {
 							var userinfo = res.data.data;
 							helper.setstate(userinfo.id);
- 							uni.redirectTo({
- 								url: 'tianxiepassword1'
- 							});
+							uni.redirectTo({
+								url: 'tianxiepassword1'
+							});
 						} else {
 							uni.showToast({
 								icon: 'none',
@@ -136,17 +142,66 @@
 						});
 					}
 				});
-			}
 		}
 	}
-</script> 
+	}
+</script>
 
 <style>
-	.content{height: 1200upx;}
-	.uni-password-but{margin: 0upx auto;width: 700upx;padding: 53upx 0;}
-	.uni-password-but .uni-phone{width: 655upx;height: 80upx;background-color: #ffffff;border-radius: 40px;border: solid 1px #dbdbdc;padding-left: 45upx;font-size: 32upx;margin-bottom: 25upx;}
-	.uni-password-but button{margin-top: 75upx;border-radius: 40upx;background-color: #ffca30;font-size: 32upx;color: #3C3C3C;letter-spacing: 2upx;}
-    .uni-yzm-but{display: flex;}
-	.uni-yzm-but view{width: 260upx;height: 80upx;font-size: 30upx;color: #3c3c3c;background-color: #ffca30;border-radius: 40upx;line-height: 80upx;text-align: center;margin-left: 15upx;}
-	.uni-yzm-but input{width:420upx;height: 80upx;background-color: #ffffff;border-radius: 40px;border: solid 1px #dbdbdc;padding-left: 45upx;font-size: 32upx;margin-bottom: 25upx;}
+	.content {
+		height: 1200upx;
+	}
+
+	.uni-password-but {
+		margin: 0upx auto;
+		width: 700upx;
+		padding: 53upx 0;
+	}
+
+	.uni-password-but .uni-phone {
+		width: 655upx;
+		height: 80upx;
+		background-color: #ffffff;
+		border-radius: 40px;
+		border: solid 1px #dbdbdc;
+		padding-left: 45upx;
+		font-size: 32upx;
+		margin-bottom: 25upx;
+	}
+
+	.uni-password-but button {
+		margin-top: 75upx;
+		border-radius: 40upx;
+		background-color: #2FB6A7;
+		font-size: 32upx;
+		color: #fff;
+		letter-spacing: 2upx;
+	}
+
+	.uni-yzm-but {
+		display: flex;
+	}
+
+	.uni-yzm-but view {
+		width: 260upx;
+		height: 80upx;
+		font-size: 30upx;
+		color: #fff;
+		background-color: #2FB6A7;
+		border-radius: 40upx;
+		line-height: 80upx;
+		text-align: center;
+		margin-left: 15upx;
+	}
+
+	.uni-yzm-but input {
+		width: 420upx;
+		height: 80upx;
+		background-color: #ffffff;
+		border-radius: 40px;
+		border: solid 1px #dbdbdc;
+		padding-left: 45upx;
+		font-size: 32upx;
+		margin-bottom: 25upx;
+	}
 </style>

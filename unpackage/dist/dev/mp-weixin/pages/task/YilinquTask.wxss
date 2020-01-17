@@ -2,6 +2,14 @@
 view {
 	line-height: 35rpx;
 }
+.uni-sctp-icon {
+	margin: 15rpx 0;
+}
+.uni-mer-img image {
+	width: 150rpx;
+	height: 250rpx;
+	margin-right: 30rpx;
+}
 .uni-img {
 	width: 200rpx;
 	height: 350rpx;
@@ -14,7 +22,7 @@ view {
 	font-size: 28rpx;
 	line-height: 55rpx;
 	color: #FFFFFF;
-	float: left;
+	text-align: center;
 }
 .content {
 	padding-top: 15rpx;
@@ -34,13 +42,12 @@ view {
 	text-align: center;
 	font-size: 32rpx;
 	color: #0b0b0b;
-	line-height: 80rpx;
+	padding: 20rpx 0;
 	border-bottom: 1rpx solid #e6e6e6;
 }
 .uni-rw-ms {
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 	font-size: 30rpx;
 	padding: 25rpx 0;
@@ -55,7 +62,6 @@ view {
 .uni-rw-ms .uni-rw-m {
 	-webkit-box-flex: 2;
 	-webkit-flex-grow: 2;
-	    -ms-flex-positive: 2;
 	        flex-grow: 2;
 	width: 565rpx;
 	text-align: justify;
@@ -90,11 +96,9 @@ view {
 .uni-time-list {
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-pack: justify;
 	-webkit-justify-content: space-between;
-	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 }
 .uni-time-item {
@@ -117,9 +121,9 @@ view {
 .uni-but-item {
 	position: fixed;
 	bottom: 0;
+	z-index: 9999999;
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 }
 .uni-but-item view {

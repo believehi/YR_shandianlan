@@ -24,15 +24,12 @@
 .uni-data-item {
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-pack: justify;
 	-webkit-justify-content: space-between;
-	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 	-webkit-box-align: center;
 	-webkit-align-items: center;
-	    -ms-flex-align: center;
 	        align-items: center;
 	padding: 20rpx 0rpx 20rpx 20rpx;
 	width: 628rpx;
@@ -47,7 +44,6 @@
 .uni-data-item view {
 	-webkit-box-flex: 2;
 	-webkit-flex-grow: 2;
-	    -ms-flex-positive: 2;
 	        flex-grow: 2;
 	text-align: right;
 	line-height: 20rpx;
@@ -74,8 +70,9 @@
 	letter-spacing: 3rpx;
 	color: #FFFFFF;
 	border: none;
-	margin-top: 110rpx;
+	margin-top: 50rpx;
 	width: 700rpx;
 	height: 90rpx;
+	text-align: center;
 }
 

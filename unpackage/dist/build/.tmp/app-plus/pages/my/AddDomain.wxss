@@ -2,6 +2,33 @@
 .content {
 	height: 1200rpx;
 }
+.uni-sctp-icon {
+	margin-top: 65rpx;
+}
+.uni-cz-box {
+	padding: 0 4%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.uni-cz-item:nth-child(2),
+.uni-cz-item:nth-child(3) {
+	margin-left: 30rpx;
+}
+.uni-cz-item image {
+	width: 175rpx;
+	height: 320rpx;
+	margin-top: 10rpx;
+}
+.uni-cz-item text {
+	font-size: 32rpx;
+	color: #1a1a1a;
+}
 .uni-item {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -13,7 +40,7 @@
 	        justify-content: center;
 }
 .uni-domain-text {
-	width: 260rpx;
+	width: 270rpx;
 }
 .uni-domain-list {
 	width: 635rpx;
@@ -51,6 +78,7 @@
 .uni-domain-list .uni-pt {
 	color: #1a1a1a;
 	text-align: right;
+	font-size: 32rpx;
 }
 .uni-item-list {
 

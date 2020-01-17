@@ -4,13 +4,14 @@
 	.Text_Nowrap{overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
 	/* 背景颜色 */
 	.content{background: #f5f5f5;}
+	page {background: #f5f5f5;}
 	/* 任务列表 */
 	.uni-rw-list{display:flex;justify-content: center;flex-wrap: wrap;}
 	.uni-rw-cont{width:644upx;height: 153upx;	box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.06);border-radius: 20upx;background-color: white;margin-bottom: 15upx;display: flex; align-items: center;padding: 0 28upx;}
 	.uni-rw-cont image{width: 95upx;height: 95upx;background-color: #eeeeee;border-radius: 10upx;}
 	.uni-rw-text{font-size: 30upx;color: #242424;margin-left: 19upx;width: 425upx;}
-	.uni-rw-text .Text_Nowrap{width: 425upx;display: inline-block;align-items:flex-end;}
-	.uni-rw-cont button{height: 49upx;background-color: #ffca2f;border-radius: 23upx;border: solid 1px #1b1b1b;color: #242424;font-size:23upx;line-height: 45upx;flex-wrap: nowrap;padding: 0 0upx ;min-width: 100upx;}
+	.uni-rw-text .Text_Nowrap{width: 425upx;}
+	.uni-rw-cont button{height: 49upx;background-color: #2FB6A7;border-radius: 23upx;border: solid 1px #2FB6A7;color: #fff;font-size:23upx;line-height: 45upx;flex-wrap: nowrap;padding: 0 0upx ;min-width: 100upx;}
 	.uni-rw-sl{font-size: 26upx;color: #b6b6b6;}
 	.uni-rw-sl view{display: inline-block;}
 	.uni-rw-sl view text{color:#feb14e;margin-left: -3upx;}
@@ -24,5 +25,13 @@
 	.lqactives{color: #fb702b !important;background: white !important;border: 1upx solid #bfbfbf;}
 	.lqactives uni-icon{background: url(http://lx97.cn/static/x2.png) no-repeat center !important;	background-size: 43upx 41upx !important;}
 	.uni-sy{padding: 0 5upx;display: inline-block;}
+	.uni-rw-text1{width: 425upx;display: inline-block;align-items:flex-end;}
 	
-	.tisi{text-align: center;display: inline-block;width: 100%;font-size: 30upx;padding:20upx 0 10upx 0;}
+	.tisi{text-align: center;display: inline-block;width: 100%;font-size: 30upx;padding:100upx 0 10upx 0;}
+	
+		.Text_Nowrap1 {
+		white-space: nowrap;
+		-o-text-overflow: ellipsis;
+		text-overflow: ellipsis;
+	
+	}

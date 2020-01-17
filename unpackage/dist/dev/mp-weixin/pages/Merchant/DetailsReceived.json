@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "已领取",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "uni-segmented-control": "/components/uni-segmented-control"
+  }
+}

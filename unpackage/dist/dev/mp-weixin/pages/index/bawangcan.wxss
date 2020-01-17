@@ -12,22 +12,18 @@
 .uni-rw-nav {
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	-webkit-flex-direction: row;
-	    -ms-flex-direction: row;
 	        flex-direction: row;
 	-webkit-box-pack: center;
 	-webkit-justify-content: center;
-	    -ms-flex-pack: center;
 	        justify-content: center;
 	width: 100%;
 	font-size: 30rpx;
 	border-radius: 10rpx;
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+	box-sizing: border-box;
 	margin: 0 auto;
 	overflow: hidden;
 	letter-spacing: 2rpx;
@@ -38,12 +34,10 @@
 .uni-rw-nav view {
 	-webkit-box-flex: 1;
 	-webkit-flex: 1;
-	    -ms-flex: 1;
 	        flex: 1;
 	text-align: center;
 	line-height: 60rpx;
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+	box-sizing: border-box;
 	position: relative;
 }
 .uni-rw-nav view text {

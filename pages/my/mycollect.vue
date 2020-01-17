@@ -5,7 +5,7 @@
 			<view class="uni-rw-cont" @tap="openrwid" :data-rwid="item.TaskID">
 				<image :src="item.thumbnail"></image>
 				<view class="uni-rw-text">
-					<text class="Text_Nowrap">{{item.TaskName}}</text>
+					<text class="Text_Nowrap uni-rw-text1">{{item.TaskName}}</text>
 					<view class="uni-rw-sl">
 						<text>{{item.PeopleMin}}-{{item.PeopleMax}}人</text>
 						<view>{{item.Days}}天内</view>
@@ -14,7 +14,9 @@
 				</view>
 				<button type="primary" :class="{butactive:item.IsGet > 0 }">{{ item.IsGet > 0 ? '已领取' : '领取' }}</button>
 			</view>
+			
 		</view>
+		<text  :class="{tisi:tishi == '暂无收藏记录'}" >{{tishi}}</text>
 		<!-- 任务领取结束-->
 	</view>
 </template>
@@ -24,15 +26,16 @@
 	export default {
 		data() {
 			return {
-				listArray:''
+				listArray:'',
+				tishi:''
 			};
 		},
 		onLoad() {
-			this.sclist()
+			// this.sclist()
 			
 		},
 		onShow(){
-			this.sclist()
+			// this.sclist()
 		},
 		methods: {
 			// 获取任务的id
@@ -58,6 +61,11 @@
 					success: res => {
 						if (res.data.code == 200) {
 							this.listArray = res.data.data.baseinfo;
+							if (this.listArray == "") {
+								this.tishi = '暂无收藏记录'
+							} else{
+								this.tishi = ''
+							}
 						} else {
 							helper.goout(res.data.info);
 							uni.showToast({

@@ -1,6 +1,6 @@
 <template>
 	<view class="uni-swiper-box">
-		<uni-segmented-control :current="current" :values="items" @clickItem="onClickItem" style-type="text" active-color="#f1a727">
+		<uni-segmented-control :current="current" :values="items" @clickItem="onClickItem" style-type="text" active-color="#2FB6A7">
 		</uni-segmented-control>
 		<view class="content">
 			<!-- 全部 -->
@@ -14,7 +14,7 @@
 							<view class="uni-rw-sl">
 								<view>{{item.PeopleMin}}-{{item.PeopleMax-1}}人</view>
 								<view>{{item.Days}}天内</view>
-								<view>还剩<text>{{item.Surplus}}</text>份</view>
+								<view>还剩<text class="uni-sy">{{item.Surplus}}</text>份</view>
 							</view>
 						</view>
 						<view class="uni-rw-time">
@@ -35,7 +35,7 @@
 							<view class="uni-rw-sl">
 								<view>{{item.PeopleMin}}-{{item.PeopleMax}}人</view>
 								<view>{{item.Days}}天内</view>
-								<view>还剩<text>{{item.Surplus}}</text>份</view>
+								<view>还剩<text class="uni-sy">{{item.Surplus}}</text>份</view>
 							</view>
 						</view>
 						<view class="uni-rw-time uni-rw-time2">
@@ -54,7 +54,7 @@
 							<view class="uni-rw-sl">
 								<view>{{item.PeopleMin}}-{{item.PeopleMax}}人</view>
 								<view>{{item.Days}}天内</view>
-								<view>还剩<text>{{item.Surplus}}</text>份</view>
+								<view>还剩<text class="uni-sy">{{item.Surplus}}</text>份</view>
 							</view>
 						</view>
 						<view class="uni-rw-time uni-rw-time3">
@@ -74,7 +74,7 @@
 							<view class="uni-rw-sl">
 								<view>{{item.PeopleMin}}-{{item.PeopleMax}}人</view>
 								<view>{{item.Days}}天内</view>
-								<view>还剩<text>{{item.Surplus}}</text>份</view>
+								<view>还剩<text class="uni-sy">{{item.Surplus}}</text>份</view>
 							</view>
 						</view>
 						<view class="uni-rw-time">
@@ -84,7 +84,7 @@
 				</view>
 			</view>
 		</view>
-		<text class="tisi">{{Tishi}}</text>
+		<text :class="{tisi:Tishi == '暂无任务'}">{{Tishi}}</text>
 	</view>
 </template>
 
@@ -105,7 +105,7 @@
 				wcArray: '', //完成数组
 				sbArray: '', //失败数组
 				num: '6', //默认显示9条任务数据
-				Tishi:''
+				Tishi: ''
 			}
 		},
 		onLoad() {
@@ -148,18 +148,18 @@
 				}
 				if (this.current === 0) { //点击列表改变初始任务状态值
 					this.State = "1"
-					this.fllist();
+					// this.fllist();
 				} else if (this.current === 1) {
 					this.State = "3"
-					this.fllist();
+					// this.fllist();
 
 				} else if (this.current === 2) {
 					this.State = "4"
-					this.fllist();
+					// this.fllist();
 
 				} else if (this.current === 3) {
 					this.State = "5"
-					this.fllist();
+					// this.fllist();
 
 				}
 			},
@@ -176,6 +176,7 @@
 						"userid": helper.getstate().userid,
 					}),
 					success: res => {
+						console.log(res)
 						if (res.data.code == 200) {
 							if (this.State == '1') { // 判断State的值
 								//日期循环格式化  直接绑定不能显示
@@ -197,16 +198,16 @@
 								title: res.data.info
 							});
 						}
-						if (res.data.data.baseinfo.length>=this.num) {       //判断触底加载是否到底最后一条 否则提示没有更多数据了
+						if (res.data.data.baseinfo.length >= this.num) { //判断触底加载是否到底最后一条 否则提示没有更多数据了
 							this.bottomtisi = '正在加载...'
-						} else{
+						} else {
 							this.bottomtisi = '没有更多数据了'
 						}
-						 if(res.data.data.baseinfo.length === 0){            //判断分类数据是否为空 否则提示暂无任务
-							this.Tishi ="暂无任务";
+						if (res.data.data.baseinfo.length === 0) { //判断分类数据是否为空 否则提示暂无任务
+							this.Tishi = "暂无任务";
 							this.bottomtisi = ''
-						}else {
-							this.Tishi ="";
+						} else {
+							this.Tishi = "";
 						}
 						uni.hideLoading();
 
@@ -341,7 +342,7 @@
 
 	.uni-rw-time text {
 		font-size: 26upx;
-		color: #ff533c;
+		color: #2FB6A7;
 	}
 
 	.uni-rw-text .Text_Nowrap {

@@ -9,11 +9,10 @@
 					</view>
 				</view>
 				<view class="uni-tyb">
-					<text>+{{item.Amount}}太阳币</text>
+					<text>{{item.Amount}}闪电币</text>
 				</view>
 			</view>
-
-
+			<text  :class="{tisi:tishi == '暂无收支记录'}" >{{tishi}}</text>
 		</view>
 	</view>
 </template>
@@ -25,6 +24,7 @@
 			return {
 				userfoArray:'',
 				num: '13',        //默认显示9条任务数据
+				tishi:''
 			};
 		},
 		onLoad() {
@@ -58,6 +58,11 @@
 							uni.hideLoading();
 							uni.stopPullDownRefresh(); //刷新停止
 							this.userfoArray = res.data.data.baseinfo;
+							if (this.userfoArray=="") {
+								this.tishi = '暂无收入记录'
+							} else{
+								this.tishi = ''
+							}
 						}
 					},
 					fail: () => {
@@ -79,11 +84,12 @@
 		padding-top: 15upx;
 		height: 1200upx;
 	}
-
+	.tisi{
+		padding: 80upx 0 !important;
+	}
 	.uni-inconme-content {
 		width: 650upx;
 		border-radius: 20upx;
-		min-height: 1275upx;
 		background: #FFFFFF;
 		margin: 0 auto;
 		padding: 0 25upx;

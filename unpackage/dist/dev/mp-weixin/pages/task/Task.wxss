@@ -8,34 +8,54 @@
 	padding: 10rpx 0;
 }
 .active {
-	color: #ffca2f !important;
+	color: #2FB6A7 !important;
 }
 
 /* 内容背景色 */
 .content {
 	background: #f5f5f5;
 }
+.platform-box{
+height: 120rpx;
+display: -webkit-box;
+display: -webkit-flex;
+display: flex;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+-webkit-flex-direction: column;
+        flex-direction: column;
+-webkit-box-pack: justify;
+-webkit-justify-content: space-between;
+        justify-content: space-between;
+}
+.platform-box text{
+	font-size: 36rpx;
+	margin-left: 35rpx;
+}
+.h{
+	height: 160rpx;
+	margin-top: 25rpx!important;
+}
+.platform-box text:nth-child(1){
+	margin-left: 0;
+}
 
 /* 选项卡样式 */
 .uni-rw-nav {
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	-webkit-flex-direction: row;
-	    -ms-flex-direction: row;
 	        flex-direction: row;
 	-webkit-box-pack: center;
 	-webkit-justify-content: center;
-	    -ms-flex-pack: center;
 	        justify-content: center;
 	width: 100%;
 	font-size: 30rpx;
 	border-radius: 10rpx;
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+	box-sizing: border-box;
 	margin: 0 auto;
 	overflow: hidden;
 	letter-spacing: 2rpx;
@@ -45,12 +65,10 @@
 .uni-rw-nav view {
 	-webkit-box-flex: 1;
 	-webkit-flex: 1;
-	    -ms-flex: 1;
 	        flex: 1;
 	text-align: center;
 	line-height: 60rpx;
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+	box-sizing: border-box;
 	position: relative;
 }
 .uni-rw-nav view text {

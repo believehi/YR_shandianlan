@@ -1,0 +1,2 @@
+<import src="./MerSafety.vue.wxml" />
+    <template is="15972eca" data="{{ ...$root['0'], $root }}"/>

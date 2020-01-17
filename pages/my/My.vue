@@ -6,8 +6,8 @@
 			<view class="uni-user-name">
 				<text class="user-name">{{userfoArray.Nickname}}</text>
 				<view class="user-name-fs">
-					<text>美团达人</text>
-					<text>粉丝10万+</text>
+					<text>{{Tagss}}</text>
+					<!-- <text>粉丝10万+</text> -->
 				</view>
 			</view>
 			<uni-icon class="iconfont icon-you"></uni-icon>
@@ -50,20 +50,20 @@
 				<uni-icon class="iconfonts icon-tubiaozhizuo-"></uni-icon>
 				<text>我的账户</text>
 			</view>
-			<!-- 我的收藏 -->
+			<!--达人认证 -->
 			<view class="uni-xx-item" @click="opencollect">
 				<uni-icon class="iconfonts icon-tubiaozhizuo-1"></uni-icon>
-				<text>我的收藏</text>
+				<text>达人认证</text>
 			</view>
 			<!-- 擅长领域 -->
-			<view class="uni-xx-item" @click="openlingyu">
+			<!-- <view class="uni-xx-item" @click="openlingyu">
 				<uni-icon class="iconfonts icon-tubiaozhizuo-1"></uni-icon>
 				<text>擅长领域</text>
-			</view>
-			<!-- 系统信息 -->
+			</view> -->
+			<!-- 系统消息 -->
 			<view class="uni-xx-item" @click="openmessages">
 				<uni-icon class="iconfonts icon-tubiaozhizuo-2"></uni-icon>
-				<text>系统信息</text>
+				<text>系统消息</text>
 			</view>
 		</view>
 		<!-- 帮助中心 -->
@@ -76,7 +76,7 @@
 			<!-- 联系客服 -->
 			<view class="uni-xx-item">
 				<uni-icon class="iconfonts icon-tubiaozhizuo-4"></uni-icon>
-				<text>联系客服</text>
+				<button class="uni-kf-but" open-type='contact' session-from="weapp">联系客服</button>
 			</view>
 			<!-- 账户安全 -->
 			<view class="uni-xx-item" @click="openzhanghu">
@@ -100,17 +100,23 @@
 		data() {
 			return {
 				userfoArray: '',
+				Tagss:''
+				
 			};
 		},
 		onLoad() {
 			this.userinfo()
+			
 		},
 		onShow() {
 			this.userinfo()
 		},
+		onPullDownRefresh: function() { //下拉刷新
+			this.userinfo(true);
+		},
 		methods: {
 			// 获取个人信息
-			userinfo() {
+			userinfo(isdown) {
 				var userId = helper.getstate().userid;
 				uni.request({
 					url: helper.websiteUrl + '/usercenter/getuserinfo',
@@ -121,14 +127,22 @@
 					success: res => {
 						if (res.data.code == 200) {
 							this.userfoArray = res.data.data.baseinfo;
+							this.Tagss = this.userfoArray.Tags
+							if(this.Tagss == '' || this.Tagss == null){
+								this.Tagss  ="未绑定平台，请在擅长领域绑定"
+							}
 						}
-
 					},
 					fail: () => {
 						uni.showToast({
 							icon: 'none',
 							title: '网络异常,请稍后重试'
 						});
+					},
+					complete: () => {
+						if (isdown) {
+							uni.stopPullDownRefresh(); //刷新停止
+						}
 					}
 				});
 			},
@@ -144,7 +158,7 @@
 			},
 			opencollect() { //打开我的收藏
 				uni.navigateTo({
-					url: 'mycollect',
+					url: '../index/radarMap',
 				});
 			},
 			openmessages() { //打开系统消息
@@ -189,12 +203,19 @@
 				});
 			},
 			logout() {
-
-				helper.logout();
-				uni.showToast({
-					icon: 'none',
-					title: '您已退出登陆'
-				})
+				uni.showModal({
+					title: '提示',
+					content: '是否确认退出登录！',
+					success: function(res) {
+						if (res.confirm) {
+							helper.logout();
+							uni.showToast({
+								icon: 'none',
+								title: '您已退出登录'
+							})
+						} 
+					}
+				});
 			}
 
 		}
@@ -206,7 +227,18 @@
 		padding-top: 15upx;
 		height: 1100upx;
 	}
-
+	button::after {
+  border: none;
+}
+	.uni-kf-but{
+		background: #FFFFFF;
+		border: 1px solid #fff;
+		font-size: 32upx;
+		padding: 0 !important;
+		margin: 0  0 0 25upx!important;
+		line-height: 32upx !important; 
+		overflow: initial;
+	}
 	.uni-user-item {
 		background: #FFFFFF;
 		border-radius: 20upx;

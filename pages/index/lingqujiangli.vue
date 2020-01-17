@@ -3,13 +3,13 @@
 		<view class="uni-jl-list">
 			<view class="uni-jl-item">
 				<text class="uni-jl">{{Dailylogin.TaskName}}</text>
-				<button type="primary" @click="Lqbut" :data-Taskid="Dailylogin.ID" :data-States="Dailylogin.States">{{Dailylogin.States == 2  ? '领取' : '领取' }}</button>
+				<button type="primary" @click="Lqbut" :data-Taskid="Dailylogin.ID" :data-States="Dailylogin.States" >{{Dailylogin.States == 2  ? '已领取' : '领取' }}</button>
 			</view>
 		</view>
 		<view class="uni-jl-list uni-jl-list1">
 			<view class="uni-jl-item" v-for="(item,index) in AwardArraylist" :data-Taskid="item.ID" :data-TaskName="item.TaskName"  :data-States="item.States" :key="index" @click="Lqbut">
 				<text class="uni-jl">{{item.TaskName}}</text>
-				<text class="uni-jl-sum">+ {{item.Reward}}太阳币</text>
+				<text class="uni-jl-sum">+ {{item.Reward}}闪电币</text>
 				<uni-icon class="iconfont-2 icon-you"></uni-icon>
 			</view>
 		</view>
@@ -22,14 +22,33 @@
 	export default {
 		data() {
 			return {
-				AwardArraylist:'',
-				Dailylogin:'' , // 每日登录
+				AwardArraylist: [{
+						TaskName: "绑定手机号奖励",
+						Reward: 0.5
+					},
+					{
+						TaskName: "绑定银行卡奖励",
+						Reward: 0.5
+					},
+					{
+						TaskName: "绑定支付宝奖励",
+						Reward: 0.5
+					},
+					{
+						TaskName: "绑定身份证奖励",
+						Reward: 0.5
+					},
+				
+				],
+				Dailylogin:{
+					TaskName:"每日登陆奖励",
+					}, // 每日登录
 				chooseday:'',
 				tishi:'领取'
 			};
 		},
 		onLoad() {
-			this.award()
+			// this.award()
 		},
 		methods: {			
 			award() {
@@ -79,6 +98,7 @@
 									icon: 'none',
 									title: '领取成功'
 								});	
+								this.Dailylogin.States = '2'
 						} else {
 							helper.goout(res.data.info);
 							uni.showToast({
@@ -162,12 +182,12 @@
 
 	.uni-jl-item .uni-jl-sum {
 		font-size: 28upx;
-		color: #FBB42B;
+		color: #2FB6A7;
 	}
 
 	.uni-jl-item button {
 		height: 55upx;
-		background-color: #FBB42B;
+		background-color: #2FB6A7;
 		border-radius: 28upx;
 		font-size: 30upx;
 		color: #FFFFFF;

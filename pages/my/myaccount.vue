@@ -2,7 +2,7 @@
 	<view class="content">
 		<!-- 收入记录 -->
 		<view @click="openshouchang">
-			<text>收入记录</text>
+			<text>收支明细</text>
 			<uni-icon  class="iconfont-2 icon-you"></uni-icon>
 		</view>
 		<!-- 提现记录 -->

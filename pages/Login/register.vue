@@ -7,7 +7,7 @@
 			</view>
 			<!-- 验证码 -->
 			<view class="uni-form-item">
-				<input type="number" name="yzm" :value="code" v-model="code" placeholder="请输入验证码" />
+				<input type="number" name="yzm"  v-model="code" placeholder="请输入验证码" />
 				<view class="message_code_gain" @click="openCodeDialog">
 					{{tipsCode}}
 				</view>
@@ -21,7 +21,7 @@
 				<input password v-model="conpassword" type="text" placeholder="确认密码" />
 			</view>
 			<!-- 请选择相应平台 -->
-			<view style="display: flex;justify-content: space-between;align-items: center;">
+			<!-- <view style="display: flex;justify-content: space-between;align-items: center;">
 				<view>
 					<view class="uni-pt" style="padding-top: 5upx;">请选择平台</view>
 					<view class="uni-list-cell-db uni-form-item uni-form-items">
@@ -37,7 +37,7 @@
 						<input name='account' type="text" class="uni-pts" v-model="account" />
 					</view>
 				</view>
-			</view>
+			</view> -->
 			<view class="uni-item">
 
 			</view>
@@ -66,9 +66,10 @@
 				account: '', //平台账号
 				plans: '', //选择的平台
 				code: "", //输入的验证码
+				codes: '',
 				codestr: '', //获取的随机数
 				choosedaylist: [], //平台选择数组
-				index: 0, //平台初始值
+				// index: 0, //平台初始值
 				tipsCode: "获取验证码",
 				timeNum: 60,
 				clikType: false,
@@ -78,23 +79,8 @@
 		},
 		onLoad() {
 			_self = this;
-			uni.request({
-				url: helper.websiteUrl + '/user/getplantype',
-				method: 'GET',
-				data: {},
-				success: res => {
-					if (res.data.code == 200) {
-						this.choosedaylist = res.data.data.plans;
-					}
-				}
-			});
 		},
 		methods: {
-			// 平台选择
-			bindPickerChange: function(e) {
-				this.index = e.target.value;
-			},
-			// 获取验证码
 			openCodeDialog: function() {
 				var that = this
 				if (that.mobile == '') {
@@ -110,22 +96,21 @@
 					});
 					return;
 				} else if (!that.clikType) {
-					console.log(that.clikType)
+					that.getTime();
 					that.codestr = helper.MathRand(4);
 					that.clikType = true;
-					console.log(that.clikType)
 					uni.request({
-						url: 'http://utf8.api.smschinese.cn/',
+						url: helper.websiteUrl + 'send/sendcode',
 						method: 'GET',
 						data: {
-							Uid: "xingjiushenqi",
-							Key: "d41d8cd98f00b204e980",
-							smsMob: that.mobile,
-							smsText: "您的验证码为：" + that.codestr + "，有效期5分钟"
+							loginMark: helper.getloginMark(),
+							token: '',
+							data: '{"phone": "' + self.mobile + '"}'
 						},
 						success: res => {
-							if (res.data == "1") {
-								that.getTime()
+							if (res.data.code == 200) {
+
+								this.codes = res.data.info;
 							} else {
 								uni.showToast({
 									icon: 'none',
@@ -141,8 +126,6 @@
 							});
 						}
 					});
-
-
 				}
 			},
 			// 验证码倒计时
@@ -177,7 +160,7 @@
 					});
 					return;
 				}
-				if (this.code == "" ||this.code != this.codestr || this.codestr !=
+				if (this.code == "" || this.code != this.codes || this.codes !=
 					this.code) {
 					uni.showToast({
 						icon: 'none',
@@ -199,13 +182,13 @@
 					});
 					return;
 				}
-				if (this.account == '') {
-					uni.showToast({
-						icon: 'none',
-						title: '请输入平台账号'
-					});
-					return;
-				}
+				// 				if (this.account == '') {
+				// 					uni.showToast({
+				// 						icon: 'none',
+				// 						title: '请输入平台账号'
+				// 					});
+				// 					return;
+				// 				}
 				uni.showLoading({
 					mask: true,
 					title: '注册中，请稍候'
@@ -215,8 +198,8 @@
 					data: {
 						loginMark: helper.getloginMark(),
 						token: '',
-						data: '{"mobile": "' + self.mobile + '","password": "' + self.password + '","account":"' + self.account +
-							'","plans":"' + e.detail.value.plans + '"}'
+						data: '{"mobile": "' + self.mobile + '","password": "' + self.password + '","plans":"' + e.detail.value.plans +
+							'"}'
 					},
 					method: 'GET',
 					dataType: 'json',
@@ -225,17 +208,22 @@
 						if (res.data.code == 200) {
 							uni.showToast({
 								icon: 'none',
-								title: '注册成功，请登陆'
+								title: '注册成功，请登录',
+								duration: 2500,
 							});
 							uni.removeStorageSync('sdlstate1');
-							uni.redirectTo({
-								url: 'login'
-							});
+							setTimeout(function() {
+								uni.redirectTo({
+									url: 'login'
+								});
+							}, 2800)
+
 						} else {
 							//console.log(res.data.info);
 							uni.showToast({
 								icon: 'none',
-								title: res.data.info
+								title: res.data.info,
+								duration: 2000,
 							});
 						}
 					},
@@ -243,10 +231,10 @@
 						uni.hideLoading();
 						uni.showToast({
 							icon: 'none',
-							title: '网络异常,请稍后重试'
+							title: '网络异常,请稍后重试',
+							duration: 2000,
 						});
 					}
-
 				})
 			},
 			openlogin() { //打开登录页面 
@@ -315,15 +303,15 @@
 		top: -20upx;
 		right: 0;
 		height: 60upx;
-		background-color: #ffca30;
+		background-color:  #2FB6A7;
 		border-radius: 30upx;
 		font-size: 28upx;
 		border: solid 1upx #dbdbdc;
-		color: #3c3c3c;
+		color: #FFFFFF;
 		text-align: center;
 		line-height: 60upx;
 		z-index: 999;
-			padding: 0 20upx;
+		padding: 0 20upx;
 	}
 
 	.uni-reg-list .uni-form-item input {
@@ -366,12 +354,12 @@
 
 	.uni-zc-but button {
 		height: 76upx;
-		background-color: #ffca2f;
+		background-color: #2FB6A7;
 		border-radius: 38upx;
 		line-height: 76upx;
 		letter-spacing: 2upx;
 		font-size: 34upx;
-		margin: 225upx 0 33upx 0;
+		margin: 150upx 0 33upx 0;
 	}
 
 	.button-hover {
